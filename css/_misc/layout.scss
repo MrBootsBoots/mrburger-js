@@ -28,6 +28,19 @@ body {
 .section {
   height: 100vh;
   min-height: 650px;
+
+  &_centered {
+    .section-title {
+      width: 100%;
+      text-align: center;
+    }
+    .container {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
 }
 
 

@@ -8,9 +8,15 @@
 }
 
 .best__item {
-  margin-right: 20px;
+  flex: 1;
+  margin-right: 15px;
+  text-align: center;
 
   &:last-child {
     margin-right: 0;
   }
+}
+
+.best__icon {
+  display: inline-block;
 }
