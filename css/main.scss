@@ -14,10 +14,12 @@ $red: #e35028;
 
 //common
 @import "blocks/common/btn.scss",
+        "blocks/common/fixed-menu.scss",
         "blocks/common/section-title.scss";
 
 // blocks
 @import "blocks/hero.scss",
         "blocks/best.scss",
         "blocks/header.scss",
+        "blocks/order.scss",
         "blocks/reviews.scss";

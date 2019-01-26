@@ -1,32 +1,43 @@
+.reviews {
+  background: #000;
+  position: relative;
+}
+
 .reviews__list {
-  height: 100%;
   display: flex;
   flex-wrap: wrap;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .reviews__item {
+  position: relative;
   width: 25%;
   height: 50%;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  filter: grayscale(100%);  
-  position: relative;
+  filter: grayscale(100%);
 
   &:hover {
-    .reviews__hover {
+    .reviews__item-hover {
       opacity: 1;
     }
   }
 }
 
-.reviews__hover {
+.reviews__item-hover {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(#454545, .7);
+  background: rgba(#000, .5);
+  padding: 10px;
+  color: #fff;
   opacity: 0;
   transition: opacity .3s;
 }

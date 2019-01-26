@@ -7,4 +7,8 @@
   display: inline-block;
   text-transform: uppercase;
   font-size: 13px;
+
+  &_background_black {
+    background: #000;
+  }
 }
