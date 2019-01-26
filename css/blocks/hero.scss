@@ -5,6 +5,25 @@
   flex-direction: column;
 }
 
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .hero__order-btn {
   margin-left: 15px;
+}
+
+.hero__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0.7;
+}
+
+.hero__content-text {
+  color: #fff;
+  font-size: 64px;
+  font-family: 'Lifehack-Medium';
 }

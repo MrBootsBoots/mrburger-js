@@ -13,7 +13,8 @@ $red: #e35028;
 
 
 //common
-@import "blocks/common/btn.scss";
+@import "blocks/common/btn.scss",
+        "blocks/common/section-title.scss";
 
 // blocks
 @import "blocks/hero.scss",
