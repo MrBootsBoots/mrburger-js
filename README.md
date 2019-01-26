@@ -1,8 +1,8 @@
-# Landing-page for "[the Burgers Restaurant](http://kniazev1.github.io/burgers/ "main page link")"
+# Landing-page for "[Mr Burger Restaurant](http://kniazev1.github.io/mrburger/ "main page link")"
 
 ## DESCRIPTION
 
-1. [Main page](http://kniazev1.github.io/burgers/ "Перейти на приветственную страницу")
+1. [Main page](http://kniazev1.github.io/mrburger/ "Перейти на приветственную страницу")
 <!-- 2. [Страница отзывов](http://kniazev1.github.io/fitness/reviews.html "Перейти на страницу отзывов")
 3. [Страница услуг](http://kniazev1.github.io/fitness/services.html "Перейти на страницу услуг") -->
 
