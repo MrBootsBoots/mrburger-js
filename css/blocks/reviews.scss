@@ -41,3 +41,15 @@
   opacity: 0;
   transition: opacity .3s;
 }
+
+.reviews__title {
+  @include gagalin;
+  font-size: 14px;
+  line-height: 28.11px;
+}
+
+.reviews__text {
+  @include ubuntu($style: light);
+  font-size: 14px;
+  line-height: 24px;
+}

@@ -23,7 +23,8 @@
 }
 
 .hero__content-text {
+  @include lifehack()
+
   color: #fff;
   font-size: 64px;
-  font-family: 'Lifehack-Medium';
 }
