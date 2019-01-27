@@ -23,7 +23,7 @@
   }
 }
 
-.form__block-title, .form-controlls__btn-title {
+.form__block-title, .form-controlls__btn-title, .form__clear {
   @include ubuntu($style: light)
   font-size: 14px;
   color: #e2e2e2;
@@ -111,9 +111,7 @@
   }
 }
 
-.form-controlls__radio:checked {
-  .form-controlls__fake-radio:after {
-    width: 8px;
-    height: 8px;
-  }
+.form-controlls__radio:checked~.form-controlls__fake-radio:after {
+  width: 8px;
+  height: 8px;
 }
