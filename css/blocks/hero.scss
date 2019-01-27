@@ -20,12 +20,12 @@
   align-items: center;
   justify-content: center;
   flex: 0.73;
-  margin-left: 50px;
+  margin-left: 15px;
 }
 
-.hero__content-image {
-  background: url('../images/hero_burger_drops.png') center 35% no-repeat;
-}
+// .hero__content-image {
+//   background: url('../images/hero_burger_drops.png') center 35% no-repeat;
+// }
 
 .hero__content-text {
   @include lifehack()
