@@ -30,9 +30,71 @@
 }
 
 .form__block-input {
+  @include ubuntu($style: light)
+
   border-radius: 5px;
   background: #fff;
   border: none;
+  outline: none;
   width: 100%;
   padding: 5px 10px;
+
+  &:focus {
+    width: 100%;
+    border: 1px solid $yellow;
+    transition: .5s;
+  }
+}
+
+.form-controlls {
+  display: flex;
+}
+
+.form-controlls__btn {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 20px;
+  cursor: pointer;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.form-controlls__radio {
+  display: none;
+}
+
+.form-controlls__fake-radio {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #c9c9c9;
+  background-image: linear-gradient(to top, #ededed, #ffffff);
+  position: relative;
+  margin-right: 10px;
+
+  &:after {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    background: $red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s;
+  }
+}
+
+.form-controlls__radio:checked {
+  .form-controlls__fake-radio:after {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+.form-controlls__btn-title {
+  color: #fff;
 }
