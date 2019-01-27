@@ -1,27 +1,25 @@
 .order {
   background: url('../images/order_bg.png') center center no-repeat;
   background-size: cover;
-}
 
-.order__content {
-  display: flex;
-
+  &__content {
+    display: flex;
+  }
 }
 
 .form {
   width: 50%;
-}
 
-.form__row {
-  display: flex;
-}
+  &__row {
+    display: flex;
+  }
+  &__block {
+    flex: 1;
+    margin-right: 20px;
 
-.form__block {
-  flex: 1;
-  margin-right: 20px;
-
-  &:last-child {
-    margin-right: 0;
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 
@@ -50,21 +48,23 @@
 
 .form-controlls {
   display: flex;
-}
 
-.form-controlls__btn {
-  display: inline-flex;
-  align-items: center;
-  margin-right: 20px;
-  cursor: pointer;
-
-  &:last-child {
-    margin-right: 0;
+  &__radio {
+    display: none;
   }
-}
+  &__checkbox {
+    display: none;
+  }
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 20px;
+    cursor: pointer;
 
-.form-controlls__radio {
-  display: none;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .form-controlls__fake-radio {
@@ -81,6 +81,27 @@
     width: 0px;
     height: 0px;
     border-radius: 50%;
+    background: $red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s;
+  }
+}
+
+.form-controlls__fake-checkbox {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #c9c9c9;
+  background-image: linear-gradient(to top, #ededed, #ffffff);
+  position: relative;
+  margin-right: 10px;
+
+  &:after {
+    content: "";
+    width: 0px;
+    height: 0px;
     background: $red;
     position: absolute;
     top: 50%;
