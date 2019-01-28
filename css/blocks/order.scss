@@ -1,11 +1,6 @@
 .order {
   background: url('../images/order_bg.png') center center no-repeat;
   background-size: cover;
-
-  &__content {
-    display: flex;
-    justify-content: space-between;
-  }
 }
 
 .form {
@@ -13,6 +8,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 0 10px 0 10px;
 
   &__container {
     width: 49%;
@@ -94,8 +90,8 @@
 }
 
 .form-controlls__fake-radio {
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   border: 1px solid #c9c9c9;
   background-image: linear-gradient(to top, #ededed, #ffffff);
@@ -117,8 +113,8 @@
 }
 
 .form-controlls__fake-checkbox {
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
   border: 1px solid #c9c9c9;
   background-image: linear-gradient(to top, #ededed, #ffffff);
   position: relative;
@@ -138,6 +134,11 @@
 }
 
 .form-controlls__radio:checked~.form-controlls__fake-radio:after {
+  width: 8px;
+  height: 8px;
+}
+
+.form-controlls__checkbox:checked~.form-controlls__fake-checkbox:after {
   width: 8px;
   height: 8px;
 }

@@ -5,19 +5,18 @@
   background: $red;
   color: #fff;
   text-decoration: none;
+  outline: none;
   border-radius: 5px;
+  border-color: transparent;
   display: inline-block;
   text-transform: uppercase;
   font-size: 13px;
-
+  cursor: pointer;
 
   &_background_black {
     background: $black;
-    border-color: $black;
   }
   &_background_none {
     background: transparent;
-    border-color: transparent;
-    outline: none;
   }
 }
