@@ -128,7 +128,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: .3s;
+    transition: 0s;
   }
 }
 
@@ -138,8 +138,11 @@
 }
 
 .form-controlls__checkbox:checked~.form-controlls__fake-checkbox:after {
-  width: 8px;
-  height: 8px;
+  content: '\2714';
+  color: $red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .form__confirm {
