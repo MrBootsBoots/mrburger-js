@@ -43,7 +43,7 @@
 
   border-radius: 5px;
   background: #fff;
-  border: none;
+  border: 2px solid #fff;
   outline: none;
   width: 100%;
   padding: 9px 10px;
@@ -51,7 +51,7 @@
   &:focus {
     width: 100%;
     border: 2px solid $yellow;
-    transition: .5s;
+    transition: .3s;
   }
 }
 
