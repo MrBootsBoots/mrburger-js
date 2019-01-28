@@ -12,6 +12,11 @@
 
 
   &_background_black {
-    background: #000;
+    background: $black;
+    border-color: $black;
+  }
+  &_background_none {
+    background: transparent;
+    border-color: transparent;
   }
 }
