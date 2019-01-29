@@ -10,12 +10,12 @@
   align-items: center;
 }
 
-.menu__list {
+.nav__list {
   display: flex;
   align-items: center;
 }
 
-.menu__item {
+.nav__item {
   @include ubuntu($style: medium);
 
   display: flex;
@@ -39,7 +39,7 @@
   }
 }
 
-.menu__link {
+.nav__link {
   color: #fff;
   text-decoration: none;
   font-size: 13px;
