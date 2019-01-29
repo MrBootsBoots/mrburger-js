@@ -3,6 +3,7 @@ $orange: #e45028;
 $yellow: #f9b43b;
 $black: #2f3234;
 $red: #e35028;
+$grey: #313436;
 
 //normalize
 @import "_misc/normalize.scss";
@@ -22,4 +23,5 @@ $red: #e35028;
         "blocks/best.scss",
         "blocks/header.scss",
         "blocks/order.scss",
-        "blocks/reviews.scss";
+        "blocks/reviews.scss",
+        "blocks/team.scss";

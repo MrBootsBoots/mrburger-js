@@ -1,0 +1,106 @@
+.team {
+  background: url(../images/team_bg.png) center center / cover no-repeat;
+  position: relative;
+
+  &__container {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 50.9%;
+    display: flex;
+    justify-content: center;
+    background-color: $grey;
+    opacity: .92;
+  }
+  &__content {
+    width: 64%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.accordeon {
+
+  &__item {
+    margin-bottom: 35px;
+    &:last-child {
+      margin-bottom: 0;
+
+    }
+  }
+  &__title {
+    margin-bottom: 15px;
+  }
+  &__content {
+    display: flex;
+    height: 0;
+    overflow: hidden;
+  }
+  &__avatar {
+    width: 135px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__avatar-img {
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+  }
+  &__description {
+    margin-left: 20px;
+  }
+}
+
+.accordeon__title:before {
+  content: '';
+  border: 5px solid transparent;
+  width: 0;
+  height: 0;
+  border-top-color: $yellow;
+  border-bottom-width: 0;
+  border-left-width: 5px;
+  border-right-width: 5px;
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.accordeon__item_active .accordeon__content {
+  height: 100%;
+}
+.accordeon__item_active .accordeon__title {
+  color: $yellow;
+}
+.accordeon__item_active .accordeon__title::before {
+  content: '';
+  border: 5px solid transparent;
+  width: 0;
+  height: 0;
+  border-bottom-color: $yellow;
+  border-top-width: 0;
+  border-left-width: 5px;
+  border-right-width: 5px;
+  display: inline-block;
+}
+
+.accordeon__title {
+  @include gagalin();
+}
+
+.accordeon__description-title {
+  @include ubuntu($style: bold);
+
+  margin-bottom: 20px;
+}
+
+.accordeon__description-text {
+  @include ubuntu($style: light);
+}
+
+.accordeon__title, .accordeon__description-title, .accordeon__description-text {
+  font-size: 14px;
+  color: #ffffff;
+}
