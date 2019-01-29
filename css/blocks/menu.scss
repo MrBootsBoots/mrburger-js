@@ -2,3 +2,14 @@
   position: relative;
   background: url('../images/menu_bg.png') center center / cover no-repeat;
 }
+.menu-accordeon {
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: $grey;
+  opacity: .82;
+  display: flex;
+  justify-content: center;
+}
