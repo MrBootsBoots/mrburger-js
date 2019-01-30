@@ -8,8 +8,18 @@
   height: 100%;
   top: 0;
   right: 0;
-  background-color: $grey;
-  opacity: .82;
   display: flex;
   justify-content: center;
+}
+
+.menu-accordeon__list {
+  
+}
+
+
+
+.menu-accordeon__title {
+  @include gagalin();
+  font-size: 40px;
+  color: #ffffff;
 }
