@@ -3,7 +3,7 @@
   width: 100%;
   height: 60px;
   bottom: 0;
-  background: #0f0f0f;
+  background: url('../images/footer_bg.png') center center / cover no-repeat;
 
   &__container {
     display: flex;
@@ -48,10 +48,15 @@
     justify-content: flex-end;
   }
   &__item {
+    opacity: .4;
     margin-right: 20px;
     height: 20px;
     &:last-child {
       margin-right: 0;
+    }
+    &:hover {
+      opacity: 1;
+      transition: opacity .3s;
     }
   }
   &__icon {
