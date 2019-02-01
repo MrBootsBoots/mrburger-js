@@ -4,19 +4,56 @@
 }
 .menu-accordeon {
   position: absolute;
-  width: 80%;
+  width: 70%;
   height: 100%;
   top: 0;
   right: 0;
-  display: flex;
-  justify-content: center;
+  display: -webkit-box;
+  justify-content: flex-end;
+
+  &__list {
+    width: 240px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  &__item {
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+  &__title {
+    position: absolute;
+    transform: rotate(-90deg) translateY(-50%);
+    transform-origin: 0 0;
+    top: 94%;
+    left: 50%;
+    width: max-content;
+  }
+  &__content {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: $grey;
+    opacity: .92;
+  }
+  &__content-text {
+    @include ubuntu($style: light);
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 24px;
+  }
 }
 
-.menu-accordeon__list {
-  
+.section-title_menu {
+  position: absolute;
+  top: 95px;
+  left: 95px;
 }
-
-
 
 .menu-accordeon__title {
   @include gagalin();
