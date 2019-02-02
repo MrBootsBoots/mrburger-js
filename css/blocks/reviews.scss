@@ -27,6 +27,11 @@
       opacity: 1;
     }
   }
+
+  @include tablets() {
+    width: 50%;
+    height: 25%;
+  }
 }
 
 .reviews__item-hover {
@@ -46,6 +51,11 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-evenly;
+
+  @include tablets() {
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .reviews__title {
@@ -58,4 +68,8 @@
   font-size: rem(14px);
   line-height: rem(24px);
   overflow: hidden;
+
+  @include phones() {
+    display: none;
+  }
 }

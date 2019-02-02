@@ -7,6 +7,10 @@
   display: flex;
   align-items: baseline;
   padding-bottom: rem(50px);
+
+  @include phones() {
+    flex-direction: column;
+  }
 }
 
 .best__item {
@@ -19,6 +23,11 @@
 
   &:last-child {
     margin-right: 0;
+  }
+
+  @include phones() {
+    flex-direction: row;
+    text-align: left;
   }
 }
 

@@ -5,11 +5,21 @@
   bottom: 0;
   background: url('../images/footer_bg.png') center center / cover no-repeat;
 
+  @include phones() {
+    height: initial;
+  }
+
   &__container {
     display: flex;
     height: 100%;
     flex-direction: row;
     align-items: center;
+
+    @include phones() {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
   }
   &__content {
     display: flex;
@@ -17,9 +27,17 @@
     align-items: flex-start;
     flex-direction: column;
   }
+  &__social {
+    display: flex;
+  }
   &__content, &__social {
     width: 50%;
     height: 100%;
+
+    @include phones() {
+      width: 100%;
+      align-items: center;
+    }
   }
   &__adress {
     @include ubuntu($style: light);
@@ -46,6 +64,10 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
+
+    @include phones() {
+      justify-content: center;
+    }
   }
   &__item {
     opacity: .4;

@@ -3,10 +3,10 @@
   background-size: cover;
   display: flex;
   flex-direction: column;
-}
 
-.hero__container {
-  justify-content: flex-start;
+  &__container {
+    justify-content: flex-start;
+  }
 }
 
 .hero__content {
@@ -29,7 +29,6 @@
 }
 
 .hero__content-description {
-  width: 50%;
   margin-left: rem(12px);
   margin-top: rem(65px);
   display: flex;
@@ -42,8 +41,12 @@
   }
 }
 
-.hero__content-image {
+.hero__content-image, .hero__content-description {
   width: 50%;
+
+  @include phones() {
+  width: initial;
+  }
 }
 
 .hero__burger-img {
