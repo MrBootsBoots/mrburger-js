@@ -1,7 +1,7 @@
 .footer {
   position: absolute;
   width: 100%;
-  height: 60px;
+  height: rem(60px);
   bottom: 0;
   background: url('../images/footer_bg.png') center center / cover no-repeat;
 
@@ -23,18 +23,18 @@
   }
   &__adress {
     @include ubuntu($style: light);
-    font-size: 14px;
+    font-size: rem(14px);
     color: #ffffff;
   }
   &__contacts-phone {
     @include ubuntu($style: bold);
-    font-size: 14px;
+    font-size: rem(14px);
     color: $red;
     text-decoration: none;
   }
   &__contacts-icon {
-    width: 14px;
-    height: 10px;
+    width: rem(14px);
+    height: rem(10px);
   }
 }
 
@@ -49,8 +49,8 @@
   }
   &__item {
     opacity: .4;
-    margin-right: 20px;
-    height: 20px;
+    margin-right: rem(20px);
+    height: rem(20px);
     &:last-child {
       margin-right: 0;
     }
@@ -60,7 +60,7 @@
     }
   }
   &__icon {
-    width: 20px;
-    height: 20px;
+    width: rem(20px);
+    height: rem(20px);
   }
 }

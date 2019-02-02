@@ -36,8 +36,8 @@
   right: 0;
   bottom: 0;
   background: rgba(#000, .5);
-  padding: 25px;
-  padding-left: 15px;
+  padding: rem(25px);
+  padding-left: rem(15px);
   color: #fff;
   opacity: 0;
   transition: opacity .3s;
@@ -50,12 +50,12 @@
 
 .reviews__title {
   @include gagalin;
-  font-size: 14px;
+  font-size: rem(14px);
 }
 
 .reviews__text {
   @include ubuntu($style: light);
-  font-size: 14px;
-  line-height: 24px;
+  font-size: rem(14px);
+  line-height: rem(24px);
   overflow: hidden;
 }

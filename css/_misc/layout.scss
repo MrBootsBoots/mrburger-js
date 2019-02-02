@@ -1,11 +1,11 @@
 html {
-  font-size: 16px;
+  font-size: rem(16px);
 
   @include tablets() {
-    font-size: 14px;
+    font-size: rem(14px);
   }
   @include phones() {
-    font-size: 13px;
+    font-size: rem(13px);
   }
 }
 

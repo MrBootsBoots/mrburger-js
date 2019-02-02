@@ -12,7 +12,7 @@
   justify-content: flex-end;
 
   &__list {
-    width: 240px;
+    width: rem(240px);
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -44,19 +44,19 @@
     width: 100%;
     height: 100%;
     color: #ffffff;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: rem(14px);
+    line-height: rem(24px);
   }
 }
 
 .section-title_menu {
   position: absolute;
-  top: 95px;
-  left: 95px;
+  top: rem(95px);
+  left: rem(95px);
 }
 
 .menu-accordeon__title {
   @include gagalin();
-  font-size: 40px;
+  font-size: rem(40px);
   color: #ffffff;
 }

@@ -6,12 +6,12 @@
 .best__list {
   display: flex;
   align-items: baseline;
-  padding-bottom: 50px;
+  padding-bottom: rem(50px);
 }
 
 .best__item {
   flex: 1;
-  margin-right: 15px;
+  margin-right: rem(15px);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -23,25 +23,25 @@
 }
 
 .best__image {
-  margin-bottom: 20px;
+  margin-bottom: rem(20px);
 }
 
 .best__icon {
   display: inline-block;
-  width: 100px;
-  height: 85px;
+  width: rem(100px);
+  height: rem(85px);
 }
 
 .best__content-title {
   @include lifehack()
 
-  font-size: 24px;
-  margin-bottom: 15px;
+  font-size: rem(24px);
+  margin-bottom: rem(15px);
 }
 
 .best__content-text {
   @include ubuntu($style: light);
 
-  font-size: 14px;
-  line-height: 20px;
+  font-size: rem(14px);
+  line-height: rem(20px);
 }
