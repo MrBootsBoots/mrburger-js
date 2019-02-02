@@ -6,19 +6,12 @@
 }
 
 .hero__container {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.hero__order-btn {
-  margin-left: 15px;
+  justify-content: flex-start;
 }
 
 .hero__content {
   display: flex;
   align-items: center;
-  justify-content: center;
   flex: 0.73;
   margin-left: 15px;
 }
@@ -34,6 +27,8 @@
 .hero__content-description {
   margin-left: 12px;
   margin-top: 65px;
+  display: flex;
+  flex-flow: column wrap;
 }
 
 .arrow-down {
