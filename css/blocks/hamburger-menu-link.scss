@@ -9,6 +9,9 @@
   @include tablets() {
     display: flex;
   }
+	@include phones() {
+    display: flex;
+  }
 }
 
 .hamburger-menu-link__bars {

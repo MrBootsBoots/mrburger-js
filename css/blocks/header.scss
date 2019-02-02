@@ -15,6 +15,15 @@
   align-items: center;
 }
 
+.header__menu {
+  @include tablets() {
+    display: none;
+  }
+  @include phones() {
+    display: none;
+  }
+}
+
 .header__links {
   display: flex;
   align-items: center;

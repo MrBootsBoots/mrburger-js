@@ -2,6 +2,13 @@
   position: fixed;
   top: rem(90px);
   right: rem(50px);
+
+  @include tablets() {
+    display: none;
+  }
+  @include phones() {
+    display: none;
+  }
 }
 
 .fixed-menu__item {

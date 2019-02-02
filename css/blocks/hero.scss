@@ -14,6 +14,10 @@
   align-items: center;
   flex: 0.73;
   margin-left: rem(15px);
+
+  @include tablets() {
+    flex-direction: column;
+  }
 }
 
 .hero__content-text {
@@ -29,7 +33,13 @@
   margin-left: rem(12px);
   margin-top: rem(65px);
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
+
+  @include tablets() {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .hero__content-image {
