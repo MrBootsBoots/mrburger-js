@@ -14,16 +14,6 @@
   &__item {
     display: flex;
     height: 100%;
-
-    @include tablets {
-    width: 100%;
-    }
-    @include phones {
-      position: absolute;
-      left: 0;
-      top: 0;
-      z-index: 10;
-    }
   }
   &__title {
     position: relative;
