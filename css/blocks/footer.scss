@@ -43,12 +43,20 @@
     @include ubuntu($style: light);
     font-size: rem(14px);
     color: #ffffff;
+
+    @include tablets() {
+      font-size: rem(16px);
+    }
   }
   &__contacts-phone {
     @include ubuntu($style: bold);
     font-size: rem(14px);
     color: $red;
     text-decoration: none;
+
+    @include tablets() {
+      font-size: rem(16px);
+    }
   }
   &__contacts-icon {
     width: rem(14px);
@@ -84,5 +92,10 @@
   &__icon {
     width: rem(20px);
     height: rem(20px);
+
+    @include tablets() {
+      width: rem(22px);
+      height: rem(22px);
+    }
   }
 }

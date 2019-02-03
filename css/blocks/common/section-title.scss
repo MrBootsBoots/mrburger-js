@@ -6,6 +6,10 @@
   line-height: 1.1;
   margin-bottom: rem(50px);
 
+  @include tablets() {
+    font-size: rem(82px);
+  }
+
   &_black {
     color: $black;
   }

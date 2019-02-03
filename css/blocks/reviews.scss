@@ -60,6 +60,10 @@
 .reviews__title {
   @include gagalin;
   font-size: rem(14px);
+
+  @include tablets() {
+    font-size: rem(16px);
+  }
 }
 
 .reviews__text {
@@ -68,6 +72,9 @@
   line-height: rem(24px);
   overflow: hidden;
 
+  @include tablets() {
+    font-size: rem(16px);
+  }
   @include phones() {
     display: none;
   }

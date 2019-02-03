@@ -46,6 +46,10 @@
 
   font-size: rem(24px);
   margin-bottom: rem(15px);
+
+  @include tablets() {
+    font-size: rem(27px);
+  }
 }
 
 .best__content-text {
@@ -53,4 +57,10 @@
 
   font-size: rem(14px);
   line-height: rem(20px);
+
+  @include tablets() {
+    font-size: rem(16px);
+    line-height: rem(26px);
+
+  }
 }

@@ -26,6 +26,9 @@
   color: #fff;
   font-size: rem(64px);
   line-height: rem(60px);
+  @include tablets() {
+    font-size: rem(72px);
+  }
 }
 
 .hero__content-description {
@@ -35,6 +38,7 @@
   flex-flow: column nowrap;
 
   @include tablets() {
+    margin-top: rem(15px);
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -44,6 +48,9 @@
 .hero__content-image, .hero__content-description {
   width: 50%;
 
+  @include tablets() {
+    width: 90%;
+  }
   @include phones() {
   width: initial;
   }

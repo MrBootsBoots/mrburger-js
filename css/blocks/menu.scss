@@ -26,6 +26,10 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    @include tablets {
+      font-size: rem(30px);
+    }
     &::before {
       content: "";
       position: absolute;
@@ -79,6 +83,9 @@
     line-height: rem(24px);
     padding: rem(60px) rem(35px);
 
+    @include tablets {
+      font-size: rem(16px);
+    }
     @include phones {
       padding: 5% 3.5%;
     }
