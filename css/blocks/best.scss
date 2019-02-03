@@ -28,6 +28,7 @@
   @include phones() {
     flex-direction: row;
     text-align: left;
+    margin-bottom: 45px;
   }
 }
 
@@ -39,6 +40,15 @@
   display: inline-block;
   width: rem(100px);
   height: rem(85px);
+
+  @include phones() {
+    width: 8.25rem;
+    height: 7.3125rem;
+  }
+}
+
+.best__content {
+  margin-left: rem(24px);
 }
 
 .best__content-title {
@@ -49,6 +59,9 @@
 
   @include tablets() {
     font-size: rem(27px);
+  }
+  @include phones() {
+    font-size: rem(28px);
   }
 }
 
@@ -61,6 +74,16 @@
   @include tablets() {
     font-size: rem(16px);
     line-height: rem(26px);
+  }
+  @include phones() {
+    font-size: rem(17px);
+    line-height: rem(30px);
+  }
+}
 
+.section-title_black {
+  @include phones() {
+    font-size: rem(62px);
+    margin-bottom: rem(30px);
   }
 }

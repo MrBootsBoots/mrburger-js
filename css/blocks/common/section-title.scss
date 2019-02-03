@@ -9,6 +9,9 @@
   @include tablets() {
     font-size: rem(82px);
   }
+  @include phones() {
+    font-size: rem(78px);
+  }
 
   &_black {
     color: $black;
@@ -21,5 +24,10 @@
   }
   &_team {
     margin-bottom: rem(40px);
+    
+    @include phones() {
+      font-size: rem(62px);
+      margin-bottom: rem(30px);
+    }
   }
 }

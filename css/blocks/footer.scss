@@ -47,6 +47,16 @@
     @include tablets() {
       font-size: rem(16px);
     }
+    @include phones() {
+      font-size: rem(18px);
+      margin-top: rem(15px);
+    }
+  }
+  &__contacts {
+    @include phones() {
+      margin-top: 5px;
+      margin-bottom: 15px;
+    }
   }
   &__contacts-phone {
     @include ubuntu($style: bold);
@@ -56,6 +66,9 @@
 
     @include tablets() {
       font-size: rem(16px);
+    }
+    @include phones() {
+      font-size: rem(18px);
     }
   }
   &__contacts-icon {
@@ -75,6 +88,7 @@
 
     @include phones() {
       justify-content: center;
+      padding-bottom: rem(20px);
     }
   }
   &__item {

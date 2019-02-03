@@ -60,12 +60,16 @@
   &__avatar {
     width: 30.5%;
     text-align: center;
+
+    @include phones() {
+      margin-bottom: rem(17px);
+    }
   }
   &__avatar-img {
     width: 100%;
     height: 100%;
-    width: rem(100px);
-  	height: rem(100px);
+    width: rem(116px);
+  	height: rem(116px);
   	border-radius: 50%;
   }
   &__description {
@@ -73,6 +77,9 @@
 
     @include tablets() {
       width: 44%;
+    }
+    @include phones() {
+      width: 70%;
     }
   }
 }
@@ -120,6 +127,9 @@
   @include tablets() {
     font-size: rem(27px);
   }
+  @include phones() {
+    font-size: rem(29.5px);
+  }
 }
 
 .team-accordeon__description-title {
@@ -131,6 +141,9 @@
   @include tablets() {
     font-size: rem(16px);
   }
+  @include phones() {
+    font-size: rem(18px);
+  }
 }
 
 .team-accordeon__description-text {
@@ -140,5 +153,8 @@
 
   @include tablets() {
     font-size: rem(16px);
+  }
+  @include phones() {
+    font-size: rem(17.3px);
   }
 }

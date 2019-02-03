@@ -8,6 +8,15 @@
 .header__logo-icon {
   width: rem(92px);
   height: rem(70px);
+
+  @include tablets() {
+    width: rem(111px);
+    height: rem(111px);
+  }
+  @include phones() {
+    width: rem(111px);
+    height: rem(111px);
+  }
 }
 
 .header__buttons {

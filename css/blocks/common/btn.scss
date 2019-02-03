@@ -13,6 +13,13 @@
   font-size: rem(13px);
   cursor: pointer;
 
+  @include tablets() {
+    font-size: rem(17px);
+  }
+  @include phones() {
+    font-size: rem(17px);
+  }
+
   &_background_black {
     background: $black;
   }
