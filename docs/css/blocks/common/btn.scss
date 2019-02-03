@@ -1,0 +1,29 @@
+.btn {
+  @include ubuntu($style: medium);
+
+  padding: rem(8px) rem(15px);
+  background: $red;
+  color: #fff;
+  text-decoration: none;
+  outline: none;
+  border-radius: rem(5px);
+  border-color: transparent;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: rem(13px);
+  cursor: pointer;
+
+  @include tablets() {
+    font-size: rem(17px);
+  }
+  @include phones() {
+    font-size: rem(17px);
+  }
+
+  &_background_black {
+    background: $black;
+  }
+  &_background_none {
+    background: transparent;
+  }
+}
