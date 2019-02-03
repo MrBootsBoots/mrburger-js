@@ -1,6 +1,10 @@
 .order {
   background: url('../images/order_bg.png') center center no-repeat;
   background-size: cover;
+
+  &__container {
+    max-width: 960px;
+  }
 }
 
 .form {
@@ -8,7 +12,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0 rem(10px) 0 rem(10px);
+  padding: 0 rem(10px) rem(15px) rem(10px);
 
   @include tablets() {
     flex-direction: column;
@@ -71,7 +75,6 @@
 
 .form__block-input_comment {
   height: rem(101px);
-
 }
 
 .form-controlls {
