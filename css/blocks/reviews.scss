@@ -54,6 +54,10 @@
   @include tablets() {
     align-items: center;
     text-align: center;
+    padding-right: rem(55px);
+    padding-left: rem(55px);
+    padding-top: rem(20px);
+    padding-bottom: rem(15px);
   }
 }
 
@@ -77,6 +81,8 @@
 
   @include tablets() {
     font-size: rem(16px);
+    margin-top: rem(10px);
+    margin-bottom: rem(10px);
   }
   @include phones() {
     display: none;

@@ -28,12 +28,16 @@
   @include phones() {
     flex-direction: row;
     text-align: left;
-    margin-bottom: 45px;
+    margin-bottom: rem(45px);
   }
 }
 
 .best__image {
   margin-bottom: rem(20px);
+
+  @include tablets() {
+    margin-bottom: rem(25px);
+  }
 }
 
 .best__icon {
@@ -41,6 +45,10 @@
   width: rem(100px);
   height: rem(85px);
 
+  @include tablets() {
+    width: 7.25rem;
+    height: 6.3125rem;
+  }
   @include phones() {
     width: 8.25rem;
     height: 7.3125rem;
@@ -48,7 +56,9 @@
 }
 
 .best__content {
-  margin-left: rem(24px);
+  @include phones() {
+    margin-left: rem(24px);
+  }
 }
 
 .best__content-title {

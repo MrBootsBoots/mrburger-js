@@ -61,6 +61,9 @@
     width: 30.5%;
     text-align: center;
 
+    @include tablets() {
+      margin-bottom: rem(17px);
+    }
     @include phones() {
       margin-bottom: rem(17px);
     }
