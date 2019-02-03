@@ -24,9 +24,9 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     padding-left: rem(98px);
-    padding-top: rem(10px);
+    padding-top: rem(96px);
 
     @include tablets() {
       padding: 0;
@@ -37,19 +37,19 @@
 .team-accordeon {
 
   &__item {
-    margin-bottom: rem(35px);
-    &:last-child {
-      margin-bottom: 0;
-
-    }
+    padding-bottom: rem(17px);
   }
-  &__title {
-    margin-bottom: rem(15px);
+    &:last-child {
+      padding-bottom: 0;
+    }
+  &__item_active {
+    padding-bottom: rem(34px);
   }
   &__content {
     display: flex;
     height: 0;
     overflow: hidden;
+    padding-top: rem(15px);
 
     @include tablets() {
       flex-direction: column;
@@ -86,7 +86,7 @@
   border-left-width: rem(5px);
   border-right-width: rem(5px);
   display: inline-block;
-  margin-right: rem(8px);
+  margin-right: rem(9px);
 }
 
 .team-accordeon__item_active .team-accordeon__content {
