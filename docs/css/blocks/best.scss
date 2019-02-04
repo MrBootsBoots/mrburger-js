@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .best {
   background: url('../images/best_bg.png') center center no-repeat;
   background-size: cover;
@@ -98,3 +99,50 @@
     margin-bottom: rem(30px);
   }
 }
+=======
+.best {
+  background: url('../images/best_bg.png') center center no-repeat;
+  background-size: cover;
+}
+
+.best__list {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 50px;
+}
+
+.best__item {
+  flex: 1;
+  margin-right: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.best__image {
+  margin-bottom: 20px;
+}
+
+.best__icon {
+  display: inline-block;
+}
+
+.best__content-title {
+  @include lifehack()
+
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.best__content-text {
+  @include ubuntu($style: light);
+
+  font-size: 14px;
+  line-height: 20px;
+}
+>>>>>>> c57192b5a90850908f1110a80a247e60c63725e7

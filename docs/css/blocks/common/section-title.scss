@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .section-title {
   @include gagalin()
 
@@ -39,3 +40,20 @@
     }
   }
 }
+=======
+.section-title {
+  @include gagalin()
+
+  font-size: 72px;
+  color: $yellow;
+  line-height: 1.1;
+  margin-bottom: 50px;
+
+  &_black {
+    color: $black;
+  }
+  &_hero {
+    margin-bottom: 25px;
+  }
+}
+>>>>>>> c57192b5a90850908f1110a80a247e60c63725e7

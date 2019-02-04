@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // colors
 $orange: #e45028;
 $yellow: #f9b43b;
@@ -34,3 +35,30 @@ $phones: 480px;
         "blocks/reviews.scss",
         "blocks/team.scss",
         "blocks/hamburger-menu-link.scss";
+=======
+//colors
+$orange: #e45028;
+$yellow: #f9b43b;
+$black: #2f3234;
+$red: #e35028;
+
+//normalize
+@import "_misc/normalize.scss";
+
+// setups
+@import "_misc/fonts",
+        "_misc/layout";
+
+
+//common
+@import "blocks/common/btn.scss",
+        "blocks/common/fixed-menu.scss",
+        "blocks/common/section-title.scss";
+
+// blocks
+@import "blocks/hero.scss",
+        "blocks/best.scss",
+        "blocks/header.scss",
+        "blocks/order.scss",
+        "blocks/reviews.scss";
+>>>>>>> c57192b5a90850908f1110a80a247e60c63725e7

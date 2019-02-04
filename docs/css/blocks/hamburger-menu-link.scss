@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .hamburger-menu-link {
 	vertical-align: middle;
 	position: relative;
@@ -36,3 +37,43 @@
 		bottom: 0;
 	}
 }
+=======
+.hamburger-menu-link {
+	vertical-align: middle;
+	position: relative;
+	height: rem(22px);
+	align-items: center;
+	margin-left: rem(30px);
+  display: none;
+
+  @include tablets() {
+    display: flex;
+  }
+	@include phones() {
+    display: flex;
+  }
+}
+
+.hamburger-menu-link__bars {
+	&, &:before, &:after {
+		background: #fff;
+		width: rem(24px);
+		height: rem(5px);
+		border-radius: rem(3px);
+	}
+
+	&:before, &:after {
+		content: "";
+		display: block;
+		position: absolute;
+	}
+
+	&:before {
+		top: 0;
+	}
+
+	&:after {
+		bottom: 0;
+	}
+}
+>>>>>>> c57192b5a90850908f1110a80a247e60c63725e7
