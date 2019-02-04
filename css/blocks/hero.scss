@@ -17,6 +17,11 @@
 
   @include tablets() {
     flex-direction: column;
+    flex: initial;
+  }
+  @include phones() {
+    flex-direction: column;
+    flex: initial;
   }
 }
 
@@ -26,11 +31,9 @@
   color: #fff;
   font-size: rem(64px);
   line-height: rem(60px);
-  @include tablets() {
-    font-size: rem(72px);
-  }
+
   @include phones() {
-    font-size: rem(64px);
+    font-size: rem(58px);
   }
 }
 
@@ -42,12 +45,14 @@
 
   @include tablets() {
     margin-top: rem(15px);
+    margin-left: 0;
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
   @include phones() {
     margin-top: rem(25px);
+    margin-left: 0;
   }
 }
 
@@ -55,7 +60,7 @@
   width: 50%;
 
   @include tablets() {
-    width: 90%;
+    width: 60%;
   }
   @include phones() {
     width: 80%;

@@ -14,10 +14,10 @@
   cursor: pointer;
 
   @include tablets() {
-    font-size: rem(17px);
+    font-size: rem(16px);
   }
   @include phones() {
-    font-size: rem(17px);
+    font-size: rem(16px);
   }
 
   &_background_black {
