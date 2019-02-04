@@ -1,21 +1,10 @@
-html {
-  font-size: rem(16px);
-
-  @include tablets() {
-    font-size: rem(14px);
-  }
-  @include phones() {
-    font-size: rem(13px);
-  }
-}
-
 html,
 body {
   height: 100%;
 }
 
 body {
-  font-size: rem(16px);
+  font-size: 16px;
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -27,18 +16,13 @@ body {
 .wrapper {
   overflow: hidden;
   width: 100%;
+  min-width: 940px;
   min-height: 100%;
 }
 
 .container {
+  width: 940px;
   margin: 0 auto;
-  position: relative;
-  max-width: 940px;
-  width: 95%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .section {
@@ -49,6 +33,12 @@ body {
     .section-title {
       width: 100%;
       text-align: center;
+    }
+    .container {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
     }
   }
 }
@@ -95,8 +85,6 @@ footer {
 // hide input type=number arrows
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }

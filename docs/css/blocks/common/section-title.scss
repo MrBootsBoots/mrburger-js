@@ -1,33 +1,15 @@
 .section-title {
   @include gagalin()
 
-  font-size: rem(72px);
+  font-size: 72px;
   color: $yellow;
   line-height: 1.1;
-  margin-bottom: rem(50px);
-
-  @include tablets() {
-    font-size: rem(82px);
-  }
-  @include phones() {
-    font-size: rem(78px);
-  }
+  margin-bottom: 50px;
 
   &_black {
     color: $black;
   }
-  &_white {
-    color: #ffffff;
-  }
   &_hero {
-    margin-bottom: rem(25px);
-  }
-  &_team {
-    margin-bottom: rem(40px);
-    
-    @include phones() {
-      font-size: rem(62px);
-      margin-bottom: rem(30px);
-    }
+    margin-bottom: 25px;
   }
 }
