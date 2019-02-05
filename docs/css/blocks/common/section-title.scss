@@ -1,0 +1,64 @@
+.section-title {
+  @include gagalin()
+
+  font-size: rem(72px);
+  color: $yellow;
+  line-height: 1.1;
+  margin-bottom: rem(50px);
+
+  @include tablets() {
+    font-size: rem(76px);
+  }
+  @include phones() {
+    font-size: rem(68px);
+  }
+
+  &_black {
+    color: $black;
+  }
+  &_white {
+    color: #ffffff;
+  }
+  &_hero {
+    margin-bottom: rem(25px);
+
+    @include tablets() {
+      white-space: nowrap;
+      margin-bottom: rem(15px);
+    }
+    @include phones() {
+      white-space: nowrap;
+    }
+  }
+  &_team {
+    margin-bottom: rem(40px);
+
+    @include phones() {
+      font-size: rem(58px);
+      margin-bottom: rem(30px);
+    }
+  }
+  &_menu {
+    position: absolute;
+    top: rem(95px);
+    left: rem(95px);
+
+    @include tablets {
+      top: rem(110px);
+      left: rem(30px);
+      margin-bottom: 0;
+    }
+    @include phones {
+      font-size: rem(56px);
+      margin-bottom: 0;
+      top: rem(60px);
+      left: rem(10px);
+    }
+  }
+  &_order {
+    @include phones() {
+      font-size: rem(50px);
+      margin-bottom: rem(20px);
+    }
+  }
+}
