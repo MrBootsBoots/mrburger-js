@@ -1,18 +1,11 @@
 .fixed-menu {
   position: fixed;
-  top: rem(90px);
-  right: rem(50px);
-
-  @include tablets() {
-    display: none;
-  }
-  @include phones() {
-    display: none;
-  }
+  top: 88px;
+  right: 43px;
 }
 
 .fixed-menu__item {
-  margin-bottom: rem(5px);
+  margin-bottom: 5px;
 
   &:last-child {
     margin-bottom: 0;
@@ -25,12 +18,12 @@
 }
 
 .fixed-menu__link {
-  width: rem(16px);
-  height: rem(16px);
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   position: relative;
   display: block;
-  border: rem(1px) solid transparent;
+  border: 1px solid transparent;
 
   &:hover {
     border-color: #fff;
@@ -39,8 +32,8 @@
   &:before {
     content: "";
     display: block;
-    width: rem(6px);
-    height: rem(6px);
+    width: 6px;
+    height: 6px;
     border-radius: 50%;
     background: #fff;
     position: absolute;
