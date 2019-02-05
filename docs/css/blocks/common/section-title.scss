@@ -1,0 +1,15 @@
+.section-title {
+  @include gagalin()
+
+  font-size: 72px;
+  color: $yellow;
+  line-height: 1.1;
+  margin-bottom: 50px;
+
+  &_black {
+    color: $black;
+  }
+  &_hero {
+    margin-bottom: 25px;
+  }
+}
