@@ -51,8 +51,8 @@
     height: 6.3125rem;
   }
   @include phones() {
-    width: 7.25rem;
-    height: 6.3125rem;
+    width: 6.25rem;
+    height: 5.3125rem;
   }
 }
 
@@ -86,15 +86,11 @@
     font-size: rem(16px);
     line-height: rem(26px);
   }
-  @include phones() {
-    font-size: rem(16px);
-    line-height: rem(30px);
-  }
 }
 
 .section-title_black {
   @include phones() {
-    font-size: rem(62px);
+    font-size: rem(56px);
     margin-bottom: rem(30px);
   }
 }

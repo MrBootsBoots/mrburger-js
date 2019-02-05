@@ -131,7 +131,7 @@
     font-size: rem(27px);
   }
   @include phones() {
-    font-size: rem(29.5px);
+    font-size: rem(24px);
   }
 }
 
@@ -156,8 +156,5 @@
 
   @include tablets() {
     font-size: rem(16px);
-  }
-  @include phones() {
-    font-size: rem(17.3px);
   }
 }
