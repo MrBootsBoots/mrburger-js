@@ -1,0 +1,66 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: rem(7px);
+}
+
+.header__logo-icon {
+  width: rem(92px);
+  height: rem(70px);
+}
+
+.header__buttons {
+  display: flex;
+  align-items: center;
+}
+
+.header__menu {
+  @include tablets() {
+    display: none;
+  }
+  @include phones() {
+    display: none;
+  }
+}
+
+.header__links {
+  display: flex;
+  align-items: center;
+  margin-left: rem(15px);
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+}
+
+.nav__item {
+  @include ubuntu($style: medium);
+
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:last-child {
+    &:after {
+      display: none;
+    }
+  }
+  &:after {
+    content: '';
+    width: rem(6px);
+    height: rem(6px);
+    border-radius: 50%;
+    margin: 0 rem(14.5px);
+    display: inline-block;
+    background: #fff;
+  }
+}
+
+.nav__link {
+  color: #fff;
+  text-decoration: none;
+  font-size: rem(13px);
+}
