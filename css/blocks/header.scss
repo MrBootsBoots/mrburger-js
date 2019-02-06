@@ -42,6 +42,7 @@
   align-items: center;
   text-decoration: none;
   text-transform: uppercase;
+  margin-right: rem(14.5px);
 
   &:last-child {
     &:after {
@@ -53,9 +54,9 @@
     width: rem(6px);
     height: rem(6px);
     border-radius: 50%;
-    margin: 0 rem(14.5px);
     display: inline-block;
     background: #fff;
+    margin-left: rem(14.5px);
   }
 }
 

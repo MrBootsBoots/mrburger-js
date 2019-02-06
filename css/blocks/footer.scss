@@ -99,6 +99,9 @@
       transition: opacity .3s;
     }
   }
+  &__link {
+    font-size: 0;
+  }
   &__icon {
     width: rem(20px);
     height: rem(20px);
