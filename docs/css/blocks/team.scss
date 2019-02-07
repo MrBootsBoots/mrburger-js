@@ -1,0 +1,164 @@
+.team {
+  background: url(../images/team_bg.png) center center / cover no-repeat;
+  position: relative;
+
+  &__container {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 50.9%;
+    display: flex;
+    justify-content: center;
+    background-color: $grey;
+    opacity: .92;
+
+    @include tablets() {
+      left: initial;
+      width: 100%;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  &__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: rem(98px);
+    padding-top: rem(96px);
+
+    @include tablets() {
+      padding: 0;
+      justify-content: center;
+    }
+  }
+}
+
+.team-accordeon {
+
+  &__item {
+    padding-bottom: rem(17px);
+  }
+    &:last-child {
+      padding-bottom: 0;
+    }
+  &__item_active {
+    padding-bottom: rem(34px);
+
+    @include tablets(){
+      padding-bottom: 2rem;
+    }
+  }
+  &__content {
+    display: flex;
+    height: 0;
+    overflow: hidden;
+    padding-top: rem(15px);
+
+    @include tablets() {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__avatar {
+    width: 30.5%;
+    text-align: center;
+
+    @include tablets() {
+      margin-bottom: 0.9rem;
+    }
+    @include phones() {
+      margin-bottom: rem(17px);
+    }
+  }
+  &__avatar-img {
+    width: 100%;
+    height: 100%;
+    width: rem(116px);
+  	height: rem(116px);
+  	border-radius: 50%;
+  }
+  &__description {
+    width: 50%;
+
+    @include tablets() {
+      width: 44%;
+    }
+    @include phones() {
+      width: 70%;
+    }
+  }
+}
+
+.team-accordeon__title:before {
+  content: '';
+  border: rem(5px) solid transparent;
+  width: 0;
+  height: 0;
+  border-top-color: $yellow;
+  border-bottom-width: 0;
+  border-left-width: rem(5px);
+  border-right-width: rem(5px);
+  display: inline-block;
+  margin-right: rem(9px);
+
+  @include tablets() {
+    border-bottom-width: rem(5px);
+  }
+}
+
+.team-accordeon__item_active .team-accordeon__content {
+  height: 100%;
+}
+.team-accordeon__item_active .team-accordeon__title {
+  color: $yellow;
+}
+.team-accordeon__item_active .team-accordeon__title::before {
+  content: '';
+  border: 5px solid transparent;
+  width: 0;
+  height: 0;
+  border-bottom-color: $yellow;
+  border-top-width: 0;
+  border-left-width: rem(5px);
+  border-right-width: rem(5px);
+  display: inline-block;
+}
+
+.team-accordeon__title {
+  @include gagalin();
+  font-size: rem(14px);
+  color: #ffffff;
+
+  @include tablets() {
+    font-size: rem(27px);
+  }
+  @include phones() {
+    font-size: rem(24px);
+  }
+}
+
+.team-accordeon__description-title {
+  @include ubuntu($style: bold);
+  margin-bottom: rem(20px);
+  font-size: rem(14px);
+  color: #ffffff;
+
+  @include tablets() {
+    font-size: rem(16px);
+  }
+  @include phones() {
+    font-size: rem(18px);
+  }
+}
+
+.team-accordeon__description-text {
+  @include ubuntu($style: light);
+  font-size: rem(14px);
+  color: #ffffff;
+
+  @include tablets() {
+    font-size: rem(16px);
+  }
+}
