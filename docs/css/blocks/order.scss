@@ -1,10 +1,6 @@
 .order {
   background: url('../images/order_bg.png') center center no-repeat;
   background-size: cover;
-
-  &__container {
-    max-width: 960px;
-  }
 }
 
 .form {
@@ -12,108 +8,67 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0 rem(10px) rem(15px) rem(10px);
+  padding: 0 10px 0 10px;
 
-  @include tablets() {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  &__container-left, &__container-right {
+  &__container {
     width: 49%;
-
-    @include tablets() {
-      width: 65%;
-    }
-    @include phones() {
-      width: 100%;
-    }
-  }
-  &__container-right {
-    @include phones() {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: stretch;
-    }
   }
   &__row {
     display: flex;
-    margin-bottom: rem(20px);
+    margin-bottom: 20px;
 
     &:last-child {
       margin-bottom: 0;
-
-      @include tablets() {
-        margin-bottom: rem(20px);
-      }
     }
   }
   &__block {
     flex: 1;
-    margin-right: rem(20px);
+    margin-right: 20px;
 
     &:last-child {
       margin-right: 0;
     }
   }
   &__clear {
-    margin-left: rem(20px);
+    margin-left: 20px;
   }
 }
 
 .form__block-title, .form-controlls__btn-title, .form__clear {
   @include ubuntu($style: light)
-  font-size: rem(14px);
+  font-size: 14px;
   color: #e2e2e2;
-
-  @include tablets() {
-    font-size: rem(16px);
-  }
 }
 
 .form__block-input {
   @include ubuntu($style: light)
 
-  border-radius: rem(5px);
+  border-radius: 5px;
   background: #fff;
-  border: rem(2px) solid #fff;
+  border: 2px solid #fff;
   outline: none;
   width: 100%;
-  padding: rem(9px) rem(10px);
-  margin-top: 5px;
-
-  @include phones() {
-    padding: rem(6px) rem(10px);
-  }
+  padding: 9px 10px;
 
   &:focus {
     width: 100%;
-    border: rem(2px) solid $yellow;
+    border: 2px solid $yellow;
     transition: .3s;
   }
 }
 
 .form__block-input_comment {
-  height: rem(120px);
+  height: 101px;
 
-  @include phones() {
-    height: rem(100px);
-  }
 }
 
 .form-controlls {
   display: flex;
   align-items: center;
-  margin-bottom: rem(30px);
-
-  @include phones() {
-    margin-bottom: rem(20px);
-  }
+  margin-bottom: 30px;
 
   &:last-child {
-    margin-bottom: rem(20px);
-    // не работает
+    margin-bottom: 20px;
   }
   &__radio {
     display: none;
@@ -124,7 +79,7 @@
   &__btn {
     display: inline-flex;
     align-items: center;
-    margin-right: rem(20px);
+    margin-right: 20px;
     cursor: pointer;
 
     &:last-child {
@@ -134,18 +89,18 @@
 }
 
 .form-controlls__fake-radio {
-  width: rem(16px);
-  height: rem(16px);
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
-  border: rem(1px) solid #c9c9c9;
+  border: 1px solid #c9c9c9;
   background-image: linear-gradient(to top, #ededed, #ffffff);
   position: relative;
-  margin-right: rem(10px);
+  margin-right: 10px;
 
   &:after {
     content: "";
-    width: 0;
-    height: 0;
+    width: 0px;
+    height: 0px;
     border-radius: 50%;
     background: $red;
     position: absolute;
@@ -157,17 +112,17 @@
 }
 
 .form-controlls__fake-checkbox {
-  width: rem(16px);
-  height: rem(16px);
-  border: rem(1px) solid #c9c9c9;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #c9c9c9;
   background-image: linear-gradient(to top, #ededed, #ffffff);
   position: relative;
-  margin-right: rem(10px);
+  margin-right: 10px;
 
   &:after {
     content: "";
-    width: 0;
-    height: 0;
+    width: 0px;
+    height: 0px;
     background: $red;
     position: absolute;
     top: 50%;
@@ -178,8 +133,8 @@
 }
 
 .form-controlls__radio:checked~.form-controlls__fake-radio:after {
-  width: rem(8px);
-  height: rem(8px);
+  width: 8px;
+  height: 8px;
 }
 
 .form-controlls__checkbox:checked~.form-controlls__fake-checkbox:after {
@@ -193,12 +148,4 @@
 .form__confirm {
   display: flex;
   align-items: center;
-}
-
-.form-cntrls {
-  @include phones() {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
 }
