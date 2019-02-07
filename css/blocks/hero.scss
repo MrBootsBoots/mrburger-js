@@ -16,7 +16,8 @@
   margin-left: rem(15px);
 
   @include tablets() {
-    margin-top: rem(70px);
+    margin-top: 0;
+    margin-left: 0;
     flex-direction: column;
     flex: initial;
   }
@@ -36,6 +37,9 @@
   font-size: rem(64px);
   line-height: rem(60px);
 
+  @include tablets() {
+    font-size: rem(72px);
+  }
   @include phones() {
     font-size: rem(58px);
   }
@@ -60,8 +64,17 @@
 .hero__content-image, .hero__content-description {
   width: 50%;
 
+  @include tablets() {
+    width: 100%;
+  }
   @include phones() {
     width: 85%;
+  }
+}
+
+.hero__content-description {
+  @include tablets() {
+    width: 75%;
   }
 }
 
