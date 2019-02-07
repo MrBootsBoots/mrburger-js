@@ -23,6 +23,9 @@
   @include phones() {
     flex-direction: column;
     flex: initial;
+    margin-top: 0;
+    margin-left: 0;
+
   }
 }
 
@@ -51,17 +54,14 @@
     align-items: center;
     text-align: center;
   }
-  @include phones() {
-    margin-top: rem(25px);
-    margin-left: 0;
-  }
+
 }
 
 .hero__content-image, .hero__content-description {
   width: 50%;
 
   @include phones() {
-    width: 80%;
+    width: 85%;
   }
 }
 
