@@ -5,50 +5,47 @@
     <title>js</title>
   </head>
   <body>
+
+
+
     <script>
 
 
+    const firstDiv = document.createElement('div');
+    document.body.appendChild(firstDiv);
 
-    // //////////////////////////////////////// 1 task :)
-    //
-    // var name = 'ILIA';
-    // console.log(name);
-    // var name = 'Polina'
-    // console.log(name);
+    const secondDiv = document.createElement('div');
+    secondDiv.className = 'inner';
 
-    // //////////////////////////////////////// 2 task :)
-    //
-    // if (10 == 11) {
-    //   console.log('true');
-    // } else {
-    //   console.log('false');
-    // };
+    firstDiv.textContent = 'Этот элемент создан при помощи DOM API';
+    secondDiv.textContent = 'Этот элемент тоже создан при помощи DOM API';
 
-    /// ////////////////////////////////////// task 3
-    //
-    // for (i = 0; i < 10; i++) {
-    //   console.log(i);
-    // };
+    firstDiv.appendChild(secondDiv);
 
-    // /////////////////////////////////////// task 4
-    //
-    // function sum(p1,p2,p3) {
-    //   res = p1 + p2 + p3;
-    //   return res;
-    // };
-    //
-    // var result = sum(10,20,30);
-    //
-    // var result = sum(100,200,300);
-    //
-    // var result = sum('He','ll','o!');
-    //
-    // console.log(result);
+    secondDiv.style.color = 'red';
+    secondDiv.addEventListener('click', function() {
+      console.log('Этот текст говорит о том, что я всё сделал правильно');
+    });
 
+    const aHref = document.createElement('a');
+    aHref.setAttribute('href', 'https://loftschool.com');
+    aHref.textContent = 'HREF';
 
+    document.body.appendChild(aHref);
 
+    const a = aHref.addEventListener('click', function (event) {
+      event.preventDefault();
+      console.log('Я кликнул на ссылку HREF');
+    });
 
+    const input = document.createElement('input');
+    const btn = document.createElement('button');
+    document.body.appendChild(input);
+    document.body.appendChild(btn);
 
+    btn.addEventListener('click', function (event) {
+      console.log(input.value);
+    });
 
 
 

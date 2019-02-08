@@ -12,7 +12,20 @@
 	@include phones() {
     display: flex;
   }
+
+	&_active {
+		@include tablets() {
+	    display: flex;
+			flex-flow: column;
+			align-items: center;
+			justify-content: center;
+	  }
+		@include phones() {
+
+	  }
+	}
 }
+
 
 .hamburger-menu-link__bars {
 	&, &:before, &:after {
