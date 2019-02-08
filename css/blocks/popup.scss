@@ -1,0 +1,19 @@
+.popup {
+
+  &__container {
+    width: rem(90px);
+    height: rem(90px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #f08c33;
+  }
+  &__picture-icon {
+    width: rem(45px);
+    height: rem(45px);
+  }
+  &__picture-name {
+    color: #ffffff;
+  }
+}
