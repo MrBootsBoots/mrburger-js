@@ -126,10 +126,16 @@
   display: inline-block;
 }
 
+.team-accordeon__item_active .team-accordeon__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .team-accordeon__title {
   @include gagalin();
-  font-size: rem(14px);
-  color: #ffffff;
+    font-size: rem(14px);
+    color: #ffffff;
 
   @include tablets() {
     font-size: rem(27px);
