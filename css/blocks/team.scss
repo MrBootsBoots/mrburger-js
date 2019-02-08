@@ -45,6 +45,10 @@
     }
   &__item.active {
     padding-bottom: rem(34px);
+
+    @include tablets(){
+      padding-bottom: 2rem;
+    }
   }
   &__content {
     height: 0;
@@ -67,7 +71,7 @@
     text-align: center;
 
     @include tablets() {
-      margin-bottom: rem(17px);
+      margin-bottom: 0.9rem;
     }
     @include phones() {
       margin-bottom: rem(17px);
@@ -127,16 +131,29 @@
   display: inline-block;
 }
 
+.team-accordeon__item_active .team-accordeon__title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  @include tablets() {
+    justify-content: center;
+  }
+  @include phones() {
+    justify-content: center;
+  }
+}
+
 .team-accordeon__title {
   @include gagalin();
-  font-size: rem(14px);
-  color: #ffffff;
+    font-size: rem(14px);
+    color: #ffffff;
 
   @include tablets() {
     font-size: rem(27px);
   }
   @include phones() {
-    font-size: rem(29.5px);
+    font-size: rem(24px);
   }
 }
 
@@ -161,8 +178,5 @@
 
   @include tablets() {
     font-size: rem(16px);
-  }
-  @include phones() {
-    font-size: rem(17.3px);
   }
 }
