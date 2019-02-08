@@ -24,12 +24,17 @@
 
   &:last-child {
     margin-right: 0;
+
+    @include phones() {
+      margin-bottom: 0;
+    }
   }
 
   @include phones() {
     flex-direction: row;
     text-align: left;
     margin-bottom: rem(45px);
+    margin-right: 0;
   }
 }
 
