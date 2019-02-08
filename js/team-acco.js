@@ -1,4 +1,3 @@
-// Team section js
 const items = document.querySelectorAll('.team-accordeon__item');
 
 for (item of items) {
