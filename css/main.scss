@@ -1,18 +1,24 @@
-//colors
+// colors
 $orange: #e45028;
 $yellow: #f9b43b;
 $black: #2f3234;
 $red: #e35028;
+$grey: #313436;
 
-//normalize
+// breakpoints
+$tablets: 768px;
+$phones: 480px;
+
+// normalize
 @import "_misc/normalize.scss";
 
 // setups
 @import "_misc/fonts",
+        "_misc/media",
         "_misc/layout";
 
 
-//common
+// common
 @import "blocks/common/btn.scss",
         "blocks/common/fixed-menu.scss",
         "blocks/common/section-title.scss";
@@ -20,6 +26,11 @@ $red: #e35028;
 // blocks
 @import "blocks/hero.scss",
         "blocks/best.scss",
+        "blocks/footer.scss",
         "blocks/header.scss",
+        "blocks/map.scss",
+        "blocks/menu.scss",
         "blocks/order.scss",
-        "blocks/reviews.scss";
+        "blocks/reviews.scss",
+        "blocks/team.scss",
+        "blocks/hamburger-menu-link.scss";
