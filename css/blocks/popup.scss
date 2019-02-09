@@ -2,6 +2,12 @@
   position: absolute;
   top: 13.8%;
   left: 3.7%;
+
+  @include tablets() {
+    top: 10.9%;
+    left: 17.6%;
+  }
+
   &__container {
     width: rem(90px);
     height: rem(90px);
@@ -11,6 +17,11 @@
     justify-content: center;
     background-color: #f08c33;
     border-radius: 10%;
+
+    @include tablets() {
+      width: 6.625rem;
+      height: 6.625rem;
+    }
   }
   &__picture-icon {
     width: rem(48px);

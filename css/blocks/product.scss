@@ -1,16 +1,30 @@
 .product {
   background: linear-gradient(0deg, #f9b43b, #eb8c38, #f9b43b);
   &__container {
+    max-width: rem(1015px);
+  }
+  &__content {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    max-width: rem(1015px);
+    height: 73%;
+
+    @include tablets() {
+      height: 90%;
+      margin: 0px 25px;
+      margin-top: 45px;
+    }
   }
 }
 
 .slider {
-  height: 75%;
+  height: 100%;
+
+  @include tablets() {
+    height: initial;
+
+  }
 
   &__list {
     height: 100%;
@@ -21,6 +35,10 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+
+    @include tablets() {
+      flex-direction: column;
+    }
   }
   &__left, &__right {
     width: 100%;
@@ -31,10 +49,22 @@
   }
   &__left {
     justify-content: center;
+
+    @include tablets() {
+      flex-direction: row;
+      margin-bottom: rem(30px);
+    }
   }
   &__right {
     justify-content: center;
     margin-left: rem(24px);
+
+    @include tablets() {
+      width: 90%;
+      align-items: center;
+      text-align: center;
+      margin-left: 0;
+    }
   }
   &__burger {
     width: 100%;
@@ -45,10 +75,14 @@
 
     &-pic {
       width: 105%;
+
+      @include tablets() {
+        width: 80%;
+      }
     }
   }
   &__title {
-    margin-bottom: 2.525rem;;
+    margin-bottom: 2.525rem;
   }
   &__kkal {
     position: absolute;
@@ -61,10 +95,21 @@
     flex-direction: column;
     opacity: .6;
 
+    @include tablets() {
+      bottom: initial;
+      left: initial;
+      top: 11%;
+      right: 16%;
+    }
   }
   &__kkal-icon {
     width: 3.75rem;
     height: 5rem;
+
+    @include tablets() {
+      width: 4.75rem;
+      height: 4.3rem;
+    }
   }
   &__kkal-quan, &__kkal-name {
     color: #ffffff;
@@ -95,14 +140,27 @@
   }
   &__price-digits {
     font-size: rem(69.5px);
+
+    @include tablets() {
+      font-size: 5rem;
+    }
   }
   &__price-currency {
     font-size: rem(29px);
     margin-left: rem(5px);
     margin-right: rem(28px);
+
+    @include tablets() {
+      font-size: 2rem;
+    }
   }
   &__description-text {
     font-size: rem(14px);
     line-height: rem(24px);
+
+    @include tablets() {
+      font-size: 1rem;
+      line-height: 1.8rem;
+    }
   }
 }

@@ -80,5 +80,10 @@
   &_product {
     line-height: rem(65px);
     margin-bottom: 0;
+
+    @include tablets() {
+      font-size: 5.2rem;
+      line-height: rem(70px);
+    }
   }
 }

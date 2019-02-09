@@ -11,6 +11,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include tablets() {
+      width: 4rem;
+    }
   }
   &_left {
     transform: rotate(90deg);
