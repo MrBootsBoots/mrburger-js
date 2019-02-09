@@ -85,5 +85,9 @@
       font-size: 5.2rem;
       line-height: rem(70px);
     }
+    @include phones() {
+      font-size: 3.85rem;
+      width: 99%;
+    }
   }
 }

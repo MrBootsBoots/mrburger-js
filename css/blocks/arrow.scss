@@ -15,6 +15,10 @@
     @include tablets() {
       width: 4rem;
     }
+    @include phones() {
+      width: 7rem;
+      height: 1.2rem;
+    }
   }
   &_left {
     transform: rotate(90deg);
