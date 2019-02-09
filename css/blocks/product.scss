@@ -5,11 +5,12 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    max-width: rem(1015px);
   }
 }
 
 .slider {
-  height: 50%;
+  height: 75%;
 
   &__list {
     height: 100%;
@@ -22,7 +23,7 @@
     justify-content: center;
   }
   &__left, &__right {
-    width: 50%;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -33,8 +34,40 @@
     background: url('/images/slider-1.png') center center no-repeat;
   }
   &__right {
-    justify-content: flex-start;
-    margin-left: rem(30px);
+    justify-content: center;
+    margin-left: rem(24px);
+  }
+  &__title {
+    margin-bottom: 2.525rem;;
+  }
+  &__kkal {
+    position: absolute;
+    bottom: 7.6%;
+    left: 2.3%;
+    width: 5.625rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: .6;
+
+  }
+  &__kkal-icon {
+    width: 3.75rem;
+    height: 5rem;
+  }
+  &__kkal-quan, &__kkal-name {
+    color: #ffffff;
+    @include gagalin();
+  }
+  &__kkal-quan {
+    font-size: rem(20px);
+  }
+  &__kkal-name {
+    font-size: rem(14px);
+  }
+  &__description {
+    margin-bottom: rem(10px);
   }
   &__description-text {
     color: #ffffff;
@@ -48,9 +81,15 @@
     color: $red;
   }
   &__price-digits {
-    font-size: rem(56px);
+    font-size: rem(69.5px);
   }
   &__price-currency {
-    font-size: rem(26px);
+    font-size: rem(29px);
+    margin-left: rem(5px);
+    margin-right: rem(28px);
+  }
+  &__description-text {
+    font-size: rem(14px);
+    line-height: rem(24px);
   }
 }
