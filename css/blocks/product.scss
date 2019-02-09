@@ -1,5 +1,5 @@
 .product {
-  background-color: #f9b43b;
+  background: linear-gradient(0deg, #f9b43b, #eb8c38, #f9b43b);
   &__container {
     display: flex;
     flex-direction: row;
@@ -30,19 +30,29 @@
     justify-content: space-between;
   }
   &__left {
-    justify-content: space-between;
-    background: url('/images/slider-1.png') center center no-repeat;
+    justify-content: center;
   }
   &__right {
     justify-content: center;
     margin-left: rem(24px);
+  }
+  &__burger {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-pic {
+      width: 105%;
+    }
   }
   &__title {
     margin-bottom: 2.525rem;;
   }
   &__kkal {
     position: absolute;
-    bottom: 7.6%;
+    bottom: 11.7%;
     left: 2.3%;
     width: 5.625rem;
     display: flex;
@@ -62,14 +72,17 @@
   }
   &__kkal-quan {
     font-size: rem(20px);
+    position: inherit;
+    bottom: 39%;
   }
   &__kkal-name {
     font-size: rem(14px);
   }
   &__description {
-    margin-bottom: rem(10px);
+    margin-bottom: 0.225rem;
   }
   &__description-text {
+    @include ubuntu($style: light);
     color: #ffffff;
   }
   &__price {
