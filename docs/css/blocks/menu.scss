@@ -18,7 +18,7 @@
   &__item &__description-close {
     display: none;
   }
-  &__item_active {
+  &__item.active {
     @include phones {
       position: absolute;
       left: 0;
@@ -67,7 +67,7 @@
   &____title_diet {
     background: url('../images/menu_diet.png');
   }
-  &__item_active &__title {
+  &__item.active &__title {
     color: $yellow;
   }
   &__title-txt {
@@ -89,18 +89,19 @@
     overflow: hidden;
     background-color: $grey;
     opacity: .92;
-  }
-  &__item_active &__description {
-    width: rem(540px);
 
-    @include tablets {
-      width: 100%;
-    }
-    @include phones {
-      width: 100%;
+    &_all {
+      width: rem(540px);
+
+        @include tablets {
+          width: 100vw;
+        }
+        @include phones {
+          width: 100vw;
+        }
     }
   }
-  &__item_active &__description-close {
+  &__item.active &__description-close {
     display: none;
 
     @include phones() {

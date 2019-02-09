@@ -56,6 +56,7 @@
     position: absolute;
     top: rem(95px);
     left: rem(95px);
+    margin-bottom: 0;
 
     @include tablets {
       top: rem(110px);
@@ -74,6 +75,19 @@
     @include phones() {
       font-size: rem(50px);
       margin-bottom: rem(20px);
+    }
+  }
+  &_product {
+    line-height: rem(65px);
+    margin-bottom: 0;
+
+    @include tablets() {
+      font-size: 5.2rem;
+      line-height: rem(70px);
+    }
+    @include phones() {
+      font-size: 3.85rem;
+      width: 99%;
     }
   }
 }
