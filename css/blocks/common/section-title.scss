@@ -56,6 +56,7 @@
     position: absolute;
     top: rem(95px);
     left: rem(95px);
+    margin-bottom: 0;
 
     @include tablets {
       top: rem(110px);
