@@ -5,7 +5,11 @@
 
   @include tablets() {
     top: 10.9%;
-    left: 17.6%;
+    left: 9.6%;
+  }
+  @include phones() {
+    top: 6.5%;
+    left: 9.6%;
   }
 
   &__container {
@@ -19,8 +23,8 @@
     border-radius: 10%;
 
     @include tablets() {
-      width: 6.625rem;
-      height: 6.625rem;
+      width: 5.625rem;
+      height: 5.625rem;
     }
   }
   &__picture-icon {

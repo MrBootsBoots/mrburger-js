@@ -58,6 +58,9 @@
       flex-direction: row;
       margin-bottom: rem(30px);
     }
+    @include phones() {
+      margin-bottom: 0;
+    }
   }
   &__right {
     justify-content: center;
@@ -87,12 +90,17 @@
         width: 80%;
       }
       @include phones() {
-        width: 100%;
+        width: 90%;
       }
     }
   }
   &__title {
     margin-bottom: 2.525rem;
+
+    @include phones() {
+      margin-bottom: 1.4rem;
+
+    }
   }
   &__kkal {
     position: absolute;
@@ -108,8 +116,14 @@
     @include tablets() {
       bottom: initial;
       left: initial;
-      top: 11%;
-      right: 16%;
+      top: 10.9%;
+      right: 12%;
+    }
+    @include phones() {
+      bottom: initial;
+      left: initial;
+      top: 6.5%;
+      right: 12%;
     }
   }
   &__kkal-icon {
@@ -135,6 +149,11 @@
   }
   &__description {
     margin-bottom: 0.225rem;
+
+    @include phones() {
+      margin-bottom: 0;
+
+    }
   }
   &__description-text {
     @include ubuntu($style: light);
