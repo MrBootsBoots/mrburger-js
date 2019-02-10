@@ -19,7 +19,13 @@
     display: none;
   }
   &__item.active {
-    @include phones {
+    @include tablets() {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 10;
+    }
+    @include phones() {
       position: absolute;
       left: 0;
       top: 0;
@@ -53,7 +59,10 @@
       background: rgba(20,20,20,0.7);
       display: block;
     }
-      @include phones {
+      @include tablets() {
+        padding: 0.7% 0.5%;
+      }
+      @include phones() {
         padding: 0.7% 0.5%;
         font-size: rem(24px);
       }
@@ -94,10 +103,10 @@
       width: rem(540px);
 
         @include tablets {
-          width: 100vw;
+          width: 69vw;
         }
         @include phones {
-          width: 100vw;
+          width: 85vw;
         }
     }
   }
