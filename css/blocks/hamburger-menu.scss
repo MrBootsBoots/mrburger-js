@@ -1,4 +1,4 @@
-.hamburger-menu-link {
+.hamburger-menu {
 	vertical-align: middle;
 	position: relative;
 	height: rem(22px);
@@ -6,28 +6,20 @@
 	margin-left: rem(30px);
   display: none;
 
-  @include tablets() {
+	@include tablets() {
     display: flex;
   }
 	@include phones() {
     display: flex;
   }
+}
 
-	&_active {
-		@include tablets() {
-	    display: flex;
-			flex-flow: column;
-			align-items: center;
-			justify-content: center;
-	  }
-		@include phones() {
-
-	  }
-	}
+.hamburger-menu__link {
+	height: 100%;
 }
 
 
-.hamburger-menu-link__bars {
+.hamburger-menu__link-bars {
 	&, &:before, &:after {
 		background: #fff;
 		width: rem(24px);
