@@ -15,7 +15,7 @@
     display: flex;
     height: 100%;
   }
-  &__item &__description-close {
+  &__item .close-btn {
     display: none;
   }
   &__item.active {
@@ -73,7 +73,7 @@
   &__title_veg {
     background: url('../images/menu_veg.png');
   }
-  &____title_diet {
+  &__title_diet {
     background: url('../images/menu_diet.png');
   }
   &__item.active &__title {
@@ -110,7 +110,7 @@
         }
     }
   }
-  &__item.active &__description-close {
+  &__item.active .close-btn {
     display: none;
 
     @include phones() {
@@ -133,7 +133,7 @@
 }
 
 // close btn
-.menu-accordeon__description-close {
+.close-btn {
   position: absolute;
   right: rem(10px);
   top: rem(15px);
@@ -148,11 +148,11 @@
   cursor: pointer;
 }
 
-.menu-accordeon__description-close:hover {
+.close-btn:hover {
   opacity: 1;
 }
 
-.menu-accordeon__description-close:before, .menu-accordeon__description-close:after {
+.close-btn:before, .close-btn:after {
   position: absolute;
   left: rem(15px);
   content: '';
@@ -162,10 +162,10 @@
   border-radius: 25%;
 }
 
-.menu-accordeon__description-close:before {
+.close-btn:before {
   transform: rotate(45deg);
 }
 
-.menu-accordeon__description-close:after {
+.close-btn:after {
   transform: rotate(-45deg);
 }

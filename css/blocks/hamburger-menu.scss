@@ -1,4 +1,34 @@
+//hamburger opened
 .hamburger-menu {
+	position: fixed;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: $grey;
+	opacity: .92;
+}
+
+.header__logo_hamburger-menu {
+	position: absolute;
+	left: 2.5%;
+	top: rem(9px);
+}
+
+.nav__list_hamburger-menu {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.close-btn_hamburger-menu {
+	display: flex;
+	position: absolute;
+}
+
+//hamburger closed
+.hamburger-menu-link {
 	vertical-align: middle;
 	position: relative;
 	height: rem(22px);
@@ -6,7 +36,7 @@
 	margin-left: rem(30px);
   display: none;
 
-	@include tablets() {
+  @include tablets() {
     display: flex;
   }
 	@include phones() {
@@ -14,12 +44,8 @@
   }
 }
 
-.hamburger-menu__link {
-	height: 100%;
-}
 
-
-.hamburger-menu__link-bars {
+.hamburger-menu-link__bars {
 	&, &:before, &:after {
 		background: #fff;
 		width: rem(24px);
