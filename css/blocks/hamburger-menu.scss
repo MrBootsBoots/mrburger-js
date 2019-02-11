@@ -7,13 +7,17 @@
 	right: 0;
 	bottom: 0;
 	background-color: $grey;
-	opacity: .92;
+	opacity: .99;
+	display: none;
+	align-items: center;
+	justify-content: center;
 }
 
 .header__logo_hamburger-menu {
 	position: absolute;
 	left: 2.5%;
 	top: rem(9px);
+	cursor: pointer;
 }
 
 .nav__list_hamburger-menu {
@@ -22,9 +26,34 @@
 	align-items: center;
 }
 
-.close-btn_hamburger-menu {
+#nav__item {
+	flex-direction: column;
+	margin: 0;
+	margin-bottom: rem(25px);
+
+	&:after {
+		margin: 0;
+	}
+}
+
+#nav__link {
+	font-size: rem(24px);
+	margin-bottom: rem(25px);
+
+	&:hover {
+		color: $yellow;
+		transition: .3s;
+	}
+}
+
+#close-hamburger {
 	display: flex;
 	position: absolute;
+	right: rem(20px);
+
+	&:before, &:after {
+	  height: rem(28px);
+	}
 }
 
 //hamburger closed

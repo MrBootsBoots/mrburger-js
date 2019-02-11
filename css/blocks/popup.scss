@@ -2,6 +2,7 @@
   position: absolute;
   top: 13.8%;
   left: 3.7%;
+  cursor: pointer;
 
   @include tablets() {
     top: 10.9%;
