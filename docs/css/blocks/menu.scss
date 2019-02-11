@@ -15,17 +15,11 @@
     display: flex;
     height: 100%;
   }
-  &__item .close-btn {
+  &__item &__description-close {
     display: none;
   }
-  &__item.active {
-    @include tablets() {
-      position: absolute;
-      left: 0;
-      top: 0;
-      z-index: 10;
-    }
-    @include phones() {
+  &__item_active {
+    @include phones {
       position: absolute;
       left: 0;
       top: 0;
@@ -59,10 +53,7 @@
       background: rgba(20,20,20,0.7);
       display: block;
     }
-      @include tablets() {
-        padding: 0.7% 0.5%;
-      }
-      @include phones() {
+      @include phones {
         padding: 0.7% 0.5%;
         font-size: rem(24px);
       }
@@ -73,10 +64,10 @@
   &__title_veg {
     background: url('../images/menu_veg.png');
   }
-  &__title_diet {
+  &____title_diet {
     background: url('../images/menu_diet.png');
   }
-  &__item.active &__title {
+  &__item_active &__title {
     color: $yellow;
   }
   &__title-txt {
@@ -98,22 +89,18 @@
     overflow: hidden;
     background-color: $grey;
     opacity: .92;
+  }
+  &__item_active &__description {
+    width: rem(540px);
 
-    &_all {
-      width: rem(540px);
-
-        @include tablets {
-          width: 69vw;
-        }
-        @include phones {
-          width: 85vw;
-        }
+    @include tablets {
+      width: 100%;
+    }
+    @include phones {
+      width: 100%;
     }
   }
-  &__item.active &__description {
-    transition: width 0.3s;
-  }
-  &__item.active .close-btn {
+  &__item_active &__description-close {
     display: none;
 
     @include phones() {
@@ -136,7 +123,7 @@
 }
 
 // close btn
-.close-btn {
+.menu-accordeon__description-close {
   position: absolute;
   right: rem(10px);
   top: rem(15px);
@@ -151,11 +138,11 @@
   cursor: pointer;
 }
 
-.close-btn:hover {
+.menu-accordeon__description-close:hover {
   opacity: 1;
 }
 
-.close-btn:before, .close-btn:after {
+.menu-accordeon__description-close:before, .menu-accordeon__description-close:after {
   position: absolute;
   left: rem(15px);
   content: '';
@@ -165,10 +152,10 @@
   border-radius: 25%;
 }
 
-.close-btn:before {
+.menu-accordeon__description-close:before {
   transform: rotate(45deg);
 }
 
-.close-btn:after {
+.menu-accordeon__description-close:after {
   transform: rotate(-45deg);
 }
