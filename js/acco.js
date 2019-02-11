@@ -34,7 +34,7 @@ function handleMenuAcco(e) {
 function closeTeamItem(teamItems) {
   Array.from(teamItems).forEach(elem => {
     elem.classList.remove('active');
-    elem.querySelector('.team-accordeon__description').style.height = 0;
+    elem.querySelector('.team-accordeon__content_all').style.height = 0;
   });
 }
 function closeMenuItem(menuItems) {
@@ -45,7 +45,7 @@ function closeMenuItem(menuItems) {
 }
 
 function openTeamItem(item) {
-  const teamContent = item.querySelector('.team-accordeon__description');
+  const teamContent = item.querySelector('.team-accordeon__content_all');
   const teamTextBlock = teamContent.firstElementChild;
   const reqHeight = teamTextBlock.getBoundingClientRect().height;
 
