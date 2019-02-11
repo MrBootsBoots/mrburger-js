@@ -43,7 +43,7 @@
     &:last-child {
       padding-bottom: 0;
     }
-  &__item_active {
+  &__item.active {
     padding-bottom: rem(34px);
 
     @include tablets(){
@@ -51,14 +51,18 @@
     }
   }
   &__content {
-    display: flex;
     height: 0;
     overflow: hidden;
-    padding-top: rem(15px);
 
-    @include tablets() {
-      flex-direction: column;
-      align-items: center;
+    &_all {
+      height: 100%;
+      display: flex;
+      padding-top: rem(15px);
+
+      @include tablets() {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   }
   &__avatar {
@@ -81,6 +85,7 @@
   }
   &__description {
     width: 50%;
+    height: 100%;
 
     @include tablets() {
       width: 44%;
@@ -108,13 +113,15 @@
   }
 }
 
-.team-accordeon__item_active .team-accordeon__content {
-  height: 100%;
+.team-accordeon__item.active .team-accordeon__content {
+  height: 210px;
+  transition: height .3s;
 }
-.team-accordeon__item_active .team-accordeon__title {
+
+.team-accordeon__item.active .team-accordeon__title {
   color: $yellow;
 }
-.team-accordeon__item_active .team-accordeon__title::before {
+.team-accordeon__item.active .team-accordeon__title::before {
   content: '';
   border: 5px solid transparent;
   width: 0;
@@ -126,7 +133,7 @@
   display: inline-block;
 }
 
-.team-accordeon__item_active .team-accordeon__title {
+.team-accordeon__item.active .team-accordeon__title {
   display: flex;
   align-items: center;
   justify-content: flex-start;

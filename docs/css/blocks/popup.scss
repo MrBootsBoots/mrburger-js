@@ -1,0 +1,88 @@
+.popup {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  width: 360px;
+  height: 335px;
+  top: 13.8%;
+  left: 3.7%;
+  cursor: pointer;
+  overflow: hidden;
+
+  @include tablets() {
+    top: 10.9%;
+    left: 9.6%;
+  }
+  @include phones() {
+    top: 6.5%;
+    left: 9.6%;
+  }
+
+  &__container {
+    width: rem(90px);
+    height: rem(90px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f08c33;
+    border-radius: 10%;
+
+    &:hover {
+      background-color: $red;
+      transition: color .3s;
+    }
+
+    @include tablets() {
+      width: 5.625rem;
+      height: 5.625rem;
+    }
+  }
+  &__content {
+    width: 75%;
+    height: 100%;
+    background-color: #ffffff;
+    opacity: .9;
+    border-radius: 2%;
+    overflow: hidden;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  &__picture-icon {
+    width: rem(48px);
+    height: rem(48px);
+  }
+  &__picture-name {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: rem(14px);
+    @include gagalin();
+  }
+  &__list {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  &__item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    &-title {
+      font-weight: 500;
+    }
+  }
+  &__item-icon {
+    width: 48px;
+    height: 40px;
+  }
+}
+
+.popup:hover .popup__content {
+  display: flex;
+}
