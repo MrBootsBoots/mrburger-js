@@ -114,8 +114,15 @@
 }
 
 .team-accordeon__item.active .team-accordeon__content {
-  height: 210px;
+  height: rem(135px);
   transition: height .3s;
+
+  @include tablets() {
+    height: rem(235px);
+  }
+  @include phones() {
+    height: rem(260px);
+  }
 }
 
 .team-accordeon__item.active .team-accordeon__title {
