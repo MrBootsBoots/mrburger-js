@@ -110,6 +110,9 @@
         }
     }
   }
+  &__item.active &__description {
+    transition: width 0.3s;
+  }
   &__item.active .close-btn {
     display: none;
 
