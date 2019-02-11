@@ -1,0 +1,101 @@
+.best {
+  background: url('../images/best_bg.png') center center no-repeat;
+  background-size: cover;
+}
+
+.best__list {
+  display: flex;
+  align-items: baseline;
+  padding-bottom: rem(50px);
+
+  @include phones() {
+    flex-direction: column;
+    padding-bottom: 0;
+  }
+}
+
+.best__item {
+  flex: 1;
+  margin-right: rem(15px);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  &:last-child {
+    margin-right: 0;
+
+    @include phones() {
+      margin-bottom: 0;
+    }
+  }
+
+  @include phones() {
+    flex-direction: row;
+    text-align: left;
+    margin-bottom: rem(45px);
+    margin-right: 0;
+  }
+}
+
+.best__image {
+  margin-bottom: rem(20px);
+
+  @include tablets() {
+    margin-bottom: rem(25px);
+  }
+}
+
+.best__icon {
+  display: inline-block;
+  width: rem(100px);
+  height: rem(85px);
+
+  @include tablets() {
+    width: 7.25rem;
+    height: 6.3125rem;
+  }
+  @include phones() {
+    width: 6.25rem;
+    height: 5.3125rem;
+  }
+}
+
+.best__content {
+  @include phones() {
+    margin-left: rem(24px);
+  }
+}
+
+.best__content-title {
+  @include lifehack()
+
+  font-size: rem(24px);
+  margin-bottom: rem(15px);
+
+  @include tablets() {
+    font-size: rem(27px);
+  }
+  @include phones() {
+    font-size: rem(24px);
+  }
+}
+
+.best__content-text {
+  @include ubuntu($style: light);
+
+  font-size: rem(14px);
+  line-height: rem(20px);
+
+  @include tablets() {
+    font-size: rem(16px);
+    line-height: rem(26px);
+  }
+}
+
+.section-title_black {
+  @include phones() {
+    font-size: rem(56px);
+    margin-bottom: rem(30px);
+  }
+}

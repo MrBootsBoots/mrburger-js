@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>js</title>
+  </head>
+  <body>
+
+
+
+    <script>
+
+
+    const firstDiv = document.createElement('div');
+    document.body.appendChild(firstDiv);
+
+    const secondDiv = document.createElement('div');
+    secondDiv.className = 'inner';
+
+    firstDiv.textContent = 'Этот элемент создан при помощи DOM API';
+    secondDiv.textContent = 'Этот элемент тоже создан при помощи DOM API';
+
+    firstDiv.appendChild(secondDiv);
+
+    secondDiv.style.color = 'red';
+    secondDiv.addEventListener('click', function() {
+      console.log('Этот текст говорит о том, что я всё сделал правильно');
+    });
+
+    const aHref = document.createElement('a');
+    aHref.setAttribute('href', 'https://loftschool.com');
+    aHref.textContent = 'HREF';
+
+    document.body.appendChild(aHref);
+
+    const a = aHref.addEventListener('click', function (event) {
+      event.preventDefault();
+      console.log('Я кликнул на ссылку HREF');
+    });
+
+    const input = document.createElement('input');
+    const btn = document.createElement('button');
+    document.body.appendChild(input);
+    document.body.appendChild(btn);
+
+    btn.addEventListener('click', function (event) {
+      console.log(input.value);
+    });
+
+
+
+
+    </script>
+  </body>
+</html>

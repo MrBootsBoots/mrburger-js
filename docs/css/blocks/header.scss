@@ -1,0 +1,74 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: rem(7px);
+}
+
+.header__logo-icon {
+  width: rem(92px);
+  height: rem(70px);
+}
+
+.header__buttons {
+  display: flex;
+  align-items: center;
+}
+
+.header__menu {
+  @include tablets() {
+    display: none;
+  }
+  @include phones() {
+    display: none;
+  }
+}
+
+.header__links {
+  display: flex;
+  align-items: center;
+  margin-left: rem(15px);
+
+  @include tablets() {
+    margin-left: 0;
+  }
+  @include phones() {
+    margin-left: 0;
+  }
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+}
+
+.nav__item {
+  @include ubuntu($style: medium);
+
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-right: rem(14.5px);
+
+  &:last-child {
+    &:after {
+      display: none;
+    }
+  }
+  &:after {
+    content: '';
+    width: rem(6px);
+    height: rem(6px);
+    border-radius: 50%;
+    display: inline-block;
+    background: #fff;
+    margin-left: rem(14.5px);
+  }
+}
+
+.nav__link {
+  color: #fff;
+  text-decoration: none;
+  font-size: rem(13px);
+}
