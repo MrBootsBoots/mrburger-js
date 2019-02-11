@@ -16,12 +16,16 @@
   margin-left: rem(15px);
 
   @include tablets() {
+    height: 86%;
+    justify-content: center;
     margin-top: 0;
     margin-left: 0;
     flex-direction: column;
     flex: initial;
   }
   @include phones() {
+    height: 70%;
+    justify-content: center;
     flex-direction: column;
     flex: initial;
     margin-top: 0;
@@ -65,7 +69,7 @@
   width: 50%;
 
   @include tablets() {
-    width: 100%;
+    width: 65%;
   }
   @include phones() {
     width: 85%;

@@ -15,11 +15,17 @@
     display: flex;
     height: 100%;
   }
-  &__item &__description-close {
+  &__item .close-btn {
     display: none;
   }
   &__item.active {
-    @include phones {
+    @include tablets() {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 10;
+    }
+    @include phones() {
       position: absolute;
       left: 0;
       top: 0;
@@ -53,7 +59,10 @@
       background: rgba(20,20,20,0.7);
       display: block;
     }
-      @include phones {
+      @include tablets() {
+        padding: 0.7% 0.5%;
+      }
+      @include phones() {
         padding: 0.7% 0.5%;
         font-size: rem(24px);
       }
@@ -64,7 +73,7 @@
   &__title_veg {
     background: url('../images/menu_veg.png');
   }
-  &____title_diet {
+  &__title_diet {
     background: url('../images/menu_diet.png');
   }
   &__item.active &__title {
@@ -94,14 +103,17 @@
       width: rem(540px);
 
         @include tablets {
-          width: 100vw;
+          width: 69vw;
         }
         @include phones {
-          width: 100vw;
+          width: 85vw;
         }
     }
   }
-  &__item.active &__description-close {
+  &__item.active &__description {
+    transition: width 0.3s;
+  }
+  &__item.active .close-btn {
     display: none;
 
     @include phones() {
@@ -124,7 +136,7 @@
 }
 
 // close btn
-.menu-accordeon__description-close {
+.close-btn {
   position: absolute;
   right: rem(10px);
   top: rem(15px);
@@ -139,11 +151,11 @@
   cursor: pointer;
 }
 
-.menu-accordeon__description-close:hover {
+.close-btn:hover {
   opacity: 1;
 }
 
-.menu-accordeon__description-close:before, .menu-accordeon__description-close:after {
+.close-btn:before, .close-btn:after {
   position: absolute;
   left: rem(15px);
   content: '';
@@ -153,10 +165,10 @@
   border-radius: 25%;
 }
 
-.menu-accordeon__description-close:before {
+.close-btn:before {
   transform: rotate(45deg);
 }
 
-.menu-accordeon__description-close:after {
+.close-btn:after {
   transform: rotate(-45deg);
 }

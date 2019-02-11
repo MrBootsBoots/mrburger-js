@@ -35,34 +35,34 @@
                 <nav class="nav">
                   <ul class="nav__list">
                     <li class="nav__item">
-                      <a href="#" class="nav__link">О нас</a>
+                      <a href="#about" class="nav__link">О нас</a>
                     </li>
                     <li class="nav__item">
-                      <a href="#" class="nav__link">Бургеры</a>
+                      <a href="#burgers" class="nav__link">Бургеры</a>
                     </li>
                     <li class="nav__item">
-                      <a href="#" class="nav__link">Команда</a>
+                      <a href="#team" class="nav__link">Команда</a>
                     </li>
                     <li class="nav__item">
-                      <a href="#" class="nav__link">Меню</a>
+                      <a href="#menu" class="nav__link">Меню</a>
                     </li>
                     <li class="nav__item">
-                      <a href="#" class="nav__link">Отзывы</a>
+                      <a href="#feedback" class="nav__link">Отзывы</a>
                     </li>
                     <li class="nav__item">
-                      <a href="#" class="nav__link">Как мы работаем</a>
+                      <a href="#how" class="nav__link">Как мы работаем</a>
                     </li>
                     <li class="nav__item">
-                      <a href="#" class="nav__link">Контакты</a>
+                      <a href="#map" class="nav__link">Контакты</a>
                     </li>
                   </ul>
                 </nav>
               </div>
               <div class="header__links">
-                <a href="#" class="btn hero__order-btn">Заказать</a>
-                <a class="hamburger-menu-link" href="">
+                <a href="#order" class="btn hero__order-btn">Заказать</a>
+                  <a class="hamburger-menu-link" id="hamburger-menu-link" href="">
                     <div class="hamburger-menu-link__bars"></div>
-                </a>
+                  </a>
               </div>
             </div>
 
@@ -91,7 +91,7 @@
         </div>
       </section>
 
-      <section class="section section_centered best">
+      <section class="section section_centered best" id="about">
         <div class="container best__container">
           <h1 class="section-title section-title_black section-title_best">Мы лучшие</h1>
           <ul class="best__list">
@@ -148,7 +148,7 @@
         </div>
       </section>
 
-      <section class="section product">
+      <section class="section product" id="burgers">
         <div class="container product__container">
           <div class="product__content">
             <div class="arrow arrow_left">
@@ -208,7 +208,7 @@
                     <div class="slider__price">
                       <h2 class="slider__price-digits">500</h2>
                       <h3 class="slider__price-currency">рублей</h3>
-                      <a href="#" class="btn product__btn">Заказать</a>
+                      <a href="#order" class="btn product__btn">Заказать</a>
                     </div>
                   </div>
                 </li>
@@ -225,7 +225,7 @@
         </div>
       </section>
 
-      <section class="section team">
+      <section class="section team" id="team">
         <div class="container team__container">
           <div class="team__content">
             <h1 class="section-title section-title_team">Команда</h1>
@@ -293,7 +293,7 @@
         </div>
       </section>
 
-      <section class="section menu">
+      <section class="section menu" id="menu">
         <h1 class="section-title section-title_white section-title_menu">Меню</h1>
         <div class="menu-accordeon">
           <ul class="menu-accordeon__list">
@@ -313,7 +313,7 @@
                     конструктивный механизм сочленений. Лирический субъект начинает диссонансный
                     анжамбеман. Наш современник стал особенно чутко относиться к слову.
                   </p>
-                  <button class="menu-accordeon__description-close"></button>
+                  <button class="close-btn"></button>
                 </div>
               </div>
             </li>
@@ -333,7 +333,7 @@
                     конструктивный механизм сочленений. Лирический субъект начинает диссонансный
                     анжамбеман. Наш современник стал особенно чутко относиться к слову.
                   </p>
-                  <button class="menu-accordeon__description-close"></button>
+                  <button class="close-btn"></button>
                 </div>
               </div>
             </li>
@@ -353,7 +353,7 @@
                     конструктивный механизм сочленений. Лирический субъект начинает диссонансный
                     анжамбеман. Наш современник стал особенно чутко относиться к слову.
                   </p>
-                  <button class="menu-accordeon__description-close"></button>
+                  <button class="close-btn"></button>
                 </div>
               </div>
             </li>
@@ -361,7 +361,7 @@
         </div>
       </section>
 
-      <section class="section reviews">
+      <section class="section reviews" id="feedback">
         <ul class="reviews__list">
           <li class="reviews__item" style="background-image: url('images/rev-1.png')">
             <div class="reviews__item-hover">
@@ -486,7 +486,7 @@
         </ul>
       </section>
 
-      <section class="section section_centered order">
+      <section class="section section_centered order" id="order">
         <div class="container order__container">
 
           <h1 class="section-title section-title_order">Закажите доставку</h1>
@@ -557,7 +557,7 @@
                   </label>
                 </div>
                 <div class="form__confirm">
-                  <a href="#" class="btn form__confirm-btn">Заказать</a>
+                  <a href="#order" class="btn form__confirm-btn">Заказать</a>
                   <div class="form__clear">
                     <button class="btn btn_background_none" type="reset">Очистить</button>
                   </div>
@@ -569,7 +569,8 @@
         </div>
       </section>
 
-      <section class="section map">
+      <section class="section map" id="map">
+        <div id="YMapsID" style="width: 100%; height: 100%;"></div>
         <footer class="footer">
           <div class="container footer__container">
             <div class="footer__content">
@@ -623,25 +624,25 @@
     <nav class="fixed-menu">
       <ul class="fixed-menu__list">
         <li class="fixed-menu__item fixed-menu__item_active">
-          <a href="#" class="fixed-menu__link"></a>
+          <a href="#about" class="fixed-menu__link"></a>
         </li>
         <li class="fixed-menu__item">
-          <a href="#" class="fixed-menu__link"></a>
+          <a href="#burgers" class="fixed-menu__link"></a>
         </li>
         <li class="fixed-menu__item">
-          <a href="#" class="fixed-menu__link"></a>
+          <a href="#team" class="fixed-menu__link"></a>
         </li>
         <li class="fixed-menu__item">
-          <a href="#" class="fixed-menu__link"></a>
+          <a href="#menu" class="fixed-menu__link"></a>
         </li>
         <li class="fixed-menu__item">
-          <a href="#" class="fixed-menu__link"></a>
+          <a href="#feedback" class="fixed-menu__link"></a>
         </li>
         <li class="fixed-menu__item">
-          <a href="#" class="fixed-menu__link"></a>
+          <a href="#how" class="fixed-menu__link"></a>
         </li>
         <li class="fixed-menu__item">
-          <a href="#" class="fixed-menu__link"></a>
+          <a href="#contacts" class="fixed-menu__link"></a>
         </li>
         <li class="fixed-menu__item">
           <a href="#" class="fixed-menu__link"></a>
@@ -652,8 +653,48 @@
       </ul>
     </nav>
 
+    <div class="hamburger-menu">
+
+      <div class="header__logo header__logo_hamburger-menu">
+        <svg class="header__logo-icon" id="logo__link">
+          <use xlink:href="./sprite.svg#logo-icon"></use>
+        </svg>
+      </div>
+
+      <button class="close-btn" id="close-hamburger"></button>
+
+      <nav class="nav" id="nav">
+        <ul class="nav__list nav__list_hamburger-menu">
+          <li class="nav__item" id="nav__item">
+            <a href="#about" class="nav__link" id="nav__link">О нас</a>
+          </li>
+          <li class="nav__item" id="nav__item">
+            <a href="#burgers" class="nav__link" id="nav__link">Бургеры</a>
+          </li>
+          <li class="nav__item" id="nav__item">
+            <a href="#team" class="nav__link" id="nav__link">Команда</a>
+          </li>
+          <li class="nav__item" id="nav__item">
+            <a href="#menu" class="nav__link" id="nav__link">Меню</a>
+          </li>
+          <li class="nav__item" id="nav__item">
+            <a href="#feedback" class="nav__link" id="nav__link">Отзывы</a>
+          </li>
+          <li class="nav__item" id="nav__item">
+            <a href="#how" class="nav__link" id="nav__link">Как мы работаем</a>
+          </li>
+          <li class="nav__item" id="nav__item">
+            <a href="#contacts" class="nav__link" id="nav__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+
+
     <!-- wrapper closed -->
   </div>
+  <script src="js/hamburger-menu.js"></script>
   <script src="js/acco.js"></script>
 </body>
 </html>

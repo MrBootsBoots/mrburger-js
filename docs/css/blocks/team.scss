@@ -53,10 +53,9 @@
   &__content {
     height: 0;
     overflow: hidden;
-    transition: height .3s;
 
     &_all {
-      height: fit-content;
+      height: 100%;
       display: flex;
       padding-top: rem(15px);
 
@@ -86,6 +85,7 @@
   }
   &__description {
     width: 50%;
+    height: 100%;
 
     @include tablets() {
       width: 44%;
@@ -115,6 +115,7 @@
 
 .team-accordeon__item.active .team-accordeon__content {
   height: 100%;
+  transition: height .3s;
 }
 .team-accordeon__item.active .team-accordeon__title {
   color: $yellow;
@@ -131,7 +132,7 @@
   display: inline-block;
 }
 
-.team-accordeon__item_active .team-accordeon__title {
+.team-accordeon__item.active .team-accordeon__title {
   display: flex;
   align-items: center;
   justify-content: flex-start;
