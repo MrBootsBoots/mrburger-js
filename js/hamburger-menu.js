@@ -1,7 +1,6 @@
 const hamburgerIcon = document.querySelector('.hamburger-menu-link');
 const hamburgerMenu = document.querySelector('.hamburger-menu');
 const hamburgerMenuItem = document.querySelectorAll('#nav__item');
-const hamburgerMenuLink = document.querySelectorAll('#nav__link');
 const hamburgerCloseBtn = document.querySelector('#close-hamburger');
 const hamburgerLogo = document.querySelector('#logo__link');
 
@@ -29,4 +28,11 @@ hamburgerLogo.addEventListener('click', e => {
   document.body.style.overflow = '';
 });
 
-//nav__link click -> overlay close
+//nav__item click -> go to #link
+for (let i = 0; i < hamburgerMenuItem.length; i++) {
+  hamburgerMenuItem[i].addEventListener('click', e => {
+    hamburgerMenu.style.display = '';
+    hamburgerIcon.style.display = '';
+    document.body.style.overflow = '';
+  })
+}
