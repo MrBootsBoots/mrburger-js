@@ -15,7 +15,7 @@
   }
   @include phones() {
     top: 6.5%;
-    left: 9.6%;
+    left: 1%;
   }
 
   &__container {
@@ -37,6 +37,10 @@
       width: 5.625rem;
       height: 5.625rem;
     }
+    @include phones() {
+      width: 4.625rem;
+      height: 4.625rem;
+    }
   }
   &__content {
     width: 75%;
@@ -52,6 +56,11 @@
   &__picture-icon {
     width: rem(48px);
     height: rem(48px);
+
+    @include phones() {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
   }
   &__picture-name {
     color: #ffffff;

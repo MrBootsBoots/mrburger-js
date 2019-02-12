@@ -123,7 +123,7 @@
       bottom: initial;
       left: initial;
       top: 6.5%;
-      right: 12%;
+      right: 0;
     }
   }
   &__kkal-icon {
@@ -133,6 +133,10 @@
     @include tablets() {
       width: 4.75rem;
       height: 4.3rem;
+    }
+    @include phones {
+      width: 3.75rem;
+      height: 3.3rem;
     }
   }
   &__kkal-quan, &__kkal-name {
