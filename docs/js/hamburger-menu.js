@@ -27,3 +27,12 @@ hamburgerLogo.addEventListener('click', e => {
   hamburgerIcon.style.display = '';
   document.body.style.overflow = '';
 });
+
+//nav__item click -> go to #link
+for (let i = 0; i < hamburgerMenuItem.length; i++) {
+  hamburgerMenuItem[i].addEventListener('click', e => {
+    hamburgerMenu.style.display = '';
+    hamburgerIcon.style.display = '';
+    document.body.style.overflow = '';
+  })
+}

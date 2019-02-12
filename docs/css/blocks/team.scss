@@ -53,9 +53,9 @@
   &__content {
     height: 0;
     overflow: hidden;
+    transition: height .3s;
 
     &_all {
-      height: 100%;
       display: flex;
       padding-top: rem(15px);
 
@@ -113,21 +113,10 @@
   }
 }
 
-.team-accordeon__item.active .team-accordeon__content {
-  height: rem(135px);
-  transition: height .3s;
-
-  @include tablets() {
-    height: rem(235px);
-  }
-  @include phones() {
-    height: rem(260px);
-  }
-}
-
 .team-accordeon__item.active .team-accordeon__title {
   color: $yellow;
 }
+
 .team-accordeon__item.active .team-accordeon__title::before {
   content: '';
   border: 5px solid transparent;
@@ -154,6 +143,8 @@
 }
 
 .team-accordeon__title {
+  cursor: pointer;
+
   @include gagalin();
     font-size: rem(14px);
     color: #ffffff;

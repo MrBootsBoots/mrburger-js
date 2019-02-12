@@ -83,6 +83,6 @@
   }
 }
 
-.popup:hover .popup__content {
+.popup.opened .popup__content {
   display: flex;
 }
