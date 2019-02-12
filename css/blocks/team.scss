@@ -154,6 +154,8 @@
 }
 
 .team-accordeon__title {
+  cursor: pointer;
+
   @include gagalin();
     font-size: rem(14px);
     color: #ffffff;
