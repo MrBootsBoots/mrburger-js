@@ -131,6 +131,7 @@
 
     @include phones {
       padding: 20% 10%;
+      padding-right: 13.6%;
     }
   }
 }
@@ -138,7 +139,7 @@
 // close btn
 .close-btn {
   position: absolute;
-  right: rem(10px);
+  right: rem(42px);
   top: rem(15px);
   width: rem(32px);
   height: rem(32px);
