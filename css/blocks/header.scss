@@ -8,6 +8,11 @@
 .header__logo-icon {
   width: rem(92px);
   height: rem(70px);
+
+  @include headerFontSize() {
+    width: rem(82px);
+    height: rem(60px);
+  }
 }
 
 .header__buttons {
@@ -16,12 +21,15 @@
 }
 
 .header__menu {
+  white-space: nowrap;
+
   @include tablets() {
     display: none;
   }
   @include phones() {
     display: none;
   }
+
 }
 
 .header__links {
@@ -51,6 +59,10 @@
   text-transform: uppercase;
   margin-right: rem(14.5px);
 
+  @include headerFontSize() {
+    margin-right: rem(5px);
+  }
+
   &:last-child {
     &:after {
       display: none;
@@ -64,6 +76,10 @@
     display: inline-block;
     background: #fff;
     margin-left: rem(14.5px);
+
+    @include headerFontSize() {
+      margin-left: rem(5px);
+    }
   }
 }
 
@@ -71,4 +87,8 @@
   color: #fff;
   text-decoration: none;
   font-size: rem(13px);
+
+  @include headerFontSize() {
+    font-size: rem(12px);
+  }
 }

@@ -29,6 +29,7 @@
   }
   &_hero {
     margin-bottom: rem(25px);
+    white-space: nowrap;
 
     @include tablets() {
       margin-bottom: 1rem;
