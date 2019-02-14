@@ -24,6 +24,10 @@
 
 .slider {
   height: 100%;
+  width: 100%;
+  // width: 125rem;
+  display: flex;
+  overflow: hidden;
 
   @include tablets() {
     height: initial;
@@ -31,10 +35,16 @@
   }
 
   &__list {
+    position: relative;
     height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    right: 0; // 58rem - ширина слайда
+    transition: right .3s;
   }
   &__item {
     height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -84,7 +94,7 @@
     justify-content: center;
 
     &-pic {
-      width: 105%;
+      width: 100%;
 
       @include tablets() {
         width: 80%;
