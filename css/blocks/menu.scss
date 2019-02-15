@@ -98,6 +98,7 @@
     overflow: hidden;
     background-color: $grey;
     opacity: .92;
+    transition: width .3s;
 
     &_all {
       width: rem(540px);
@@ -109,9 +110,6 @@
           width: 85vw;
         }
     }
-  }
-  &__item.active &__description {
-    transition: width 0.3s;
   }
   &__item.active .close-btn {
     display: none;

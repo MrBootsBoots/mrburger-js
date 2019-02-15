@@ -13,11 +13,14 @@
     justify-content: center;
 
     @include tablets() {
-      width: 4rem;
+      width: 2rem;
     }
     @include phones() {
-      width: 7rem;
+      width: 2rem;
       height: 1.2rem;
+    }
+    @include iphoneFiveScreen() {
+      width: 1.6rem;
     }
   }
   &_left {
