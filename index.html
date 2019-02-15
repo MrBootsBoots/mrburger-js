@@ -899,49 +899,51 @@
 
           <h1 class="section-title section-title_order">Закажите доставку</h1>
 
-          <form action="#" class="form">
+          <form action="#" class="form" id="order-form">
             <div class="form__container-left">
               <div class="form__row">
                 <div class="form__block">
                   <div class="form__block-title"><label>Имя
-                  <input type="text" class="form__block-input"></label></div>
+                  <input type="text" class="form__block-input" name="name" required></label></div>
+                  <div class="error"></div>
                 </div>
                 <div class="form__block">
                   <div class="form__block-title"><label>Телефон
-                  <input type="tel" class="form__block-input"></label></div>
+                  <input type="tel" class="form__block-input" placeholder="89212264923" id="phone" name="phone" required></label></div>
+                  <div class="error"></div>
                 </div>
               </div>
               <div class="form__row">
                 <div class="form__block">
                   <div class="form__block-title"><label>Улица
-                  <input type="text" class="form__block-input"></label></div>
+                  <input type="text" class="form__block-input" name="street"></label></div>
                 </div>
               </div>
               <div class="form__row">
                 <div class="form__block">
                   <div class="form__block-title"><label>Дом
-                  <input type="number" class="form__block-input"></label></div>
+                  <input type="number" class="form__block-input" name="house" id="house"></label></div>
                 </div>
                 <div class="form__block">
                   <div class="form__block-title"><label>Корпус
-                  <input type="number" class="form__block-input"></label></div>
+                  <input type="number" class="form__block-input" name="housing" id="housing"></label></div>
                 </div>
                 <div class="form__block">
                   <div class="form__block-title"><label>Квартира
-                  <input type="number" class="form__block-input"></label></div>
+                  <input type="number" class="form__block-input" name="flat" id="flat"></label></div>
                 </div>
                 <div class="form__block">
                   <div class="form__block-title"><label>Этаж
-                  <input type="number" class="form__block-input"></label></div>
+                  <input type="number" class="form__block-input" name="floor" id="floor"></label></div>
                 </div>
               </div>
             </div>
-
             <div class="form__container-right">
               <div class="form__row">
                 <div class="form__block">
                   <div class="form__block-title"><label>Комментарий
-                  <input type="text" class="form__block-input form__block-input_comment"></label></div>
+                  <textarea class="form__block-input form__block-input_comment" name="comment" required></textarea></label></div>
+                  <div class="error"></div>
                 </div>
               </div>
               <div class="form-cntrls">
@@ -965,7 +967,7 @@
                   </label>
                 </div>
                 <div class="form__confirm">
-                  <a href="#order" class="btn form__confirm-btn">Заказать</a>
+                  <button type="button" class="btn form__confirm-btn" id="send">Заказать</button>
                   <div class="form__clear">
                     <button class="btn btn_background_none" type="reset">Очистить</button>
                   </div>
@@ -973,7 +975,6 @@
               </div>
             </div>
           </form>
-
         </div>
       </section>
 
@@ -1106,5 +1107,8 @@
   <script src="js/product-slider.js"></script>
   <script src="js/reviews-modal.js"></script>
   <script src="js/acco.js"></script>
+  <script src="js/order-form.js"></script>
+  <script src="js/form-input-numbers.js"></script>
+
 </body>
 </html>
