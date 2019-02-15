@@ -15,11 +15,17 @@
     display: flex;
     height: 100%;
   }
-  &__item &__description-close {
+  &__item .close-btn {
     display: none;
   }
-  &__item_active {
-    @include phones {
+  &__item.active {
+    @include tablets() {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 10;
+    }
+    @include phones() {
       position: absolute;
       left: 0;
       top: 0;
@@ -53,7 +59,10 @@
       background: rgba(20,20,20,0.7);
       display: block;
     }
-      @include phones {
+      @include tablets() {
+        padding: 0.7% 0.5%;
+      }
+      @include phones() {
         padding: 0.7% 0.5%;
         font-size: rem(24px);
       }
@@ -64,10 +73,10 @@
   &__title_veg {
     background: url('../images/menu_veg.png');
   }
-  &____title_diet {
+  &__title_diet {
     background: url('../images/menu_diet.png');
   }
-  &__item_active &__title {
+  &__item.active &__title {
     color: $yellow;
   }
   &__title-txt {
@@ -89,18 +98,20 @@
     overflow: hidden;
     background-color: $grey;
     opacity: .92;
-  }
-  &__item_active &__description {
-    width: rem(540px);
+    transition: width .3s;
 
-    @include tablets {
-      width: 100%;
-    }
-    @include phones {
-      width: 100%;
+    &_all {
+      width: rem(540px);
+
+        @include tablets {
+          width: 69vw;
+        }
+        @include phones {
+          width: 85vw;
+        }
     }
   }
-  &__item_active &__description-close {
+  &__item.active .close-btn {
     display: none;
 
     @include phones() {
@@ -118,14 +129,15 @@
 
     @include phones {
       padding: 20% 10%;
+      padding-right: 13.6%;
     }
   }
 }
 
 // close btn
-.menu-accordeon__description-close {
+.close-btn {
   position: absolute;
-  right: rem(10px);
+  right: rem(42px);
   top: rem(15px);
   width: rem(32px);
   height: rem(32px);
@@ -138,11 +150,11 @@
   cursor: pointer;
 }
 
-.menu-accordeon__description-close:hover {
+.close-btn:hover {
   opacity: 1;
 }
 
-.menu-accordeon__description-close:before, .menu-accordeon__description-close:after {
+.close-btn:before, .close-btn:after {
   position: absolute;
   left: rem(15px);
   content: '';
@@ -152,10 +164,10 @@
   border-radius: 25%;
 }
 
-.menu-accordeon__description-close:before {
+.close-btn:before {
   transform: rotate(45deg);
 }
 
-.menu-accordeon__description-close:after {
+.close-btn:after {
   transform: rotate(-45deg);
 }

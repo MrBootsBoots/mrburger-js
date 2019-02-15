@@ -1,0 +1,224 @@
+.product {
+  background: linear-gradient(0deg, #f9b43b, #eb8c38, #f9b43b);
+  &__container {
+    max-width: rem(1015px);
+  }
+  &__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 73%;
+
+    @include tablets() {
+      height: 90%;
+      margin: 0 rem(25px);
+      margin-top: rem(45px);
+    }
+    @include phones() {
+      height: 100%;
+      margin: 0;
+    }
+  }
+}
+
+.slider {
+  height: 100%;
+  width: 100%;
+  // width: 125rem;
+  display: flex;
+  overflow: hidden;
+
+  @include tablets() {
+    height: initial;
+
+  }
+
+  &__list {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    right: 0; // 58rem - ширина слайда
+    transition: right .3s;
+  }
+  &__item {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    @include tablets() {
+      flex-direction: column;
+    }
+  }
+  &__left, &__right {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__left {
+    position: relative;
+    justify-content: center;
+
+    @include tablets() {
+      flex-direction: row;
+      margin-bottom: rem(30px);
+    }
+    @include phones() {
+      margin-bottom: 0;
+    }
+  }
+  &__right {
+    justify-content: center;
+    margin-left: rem(24px);
+
+    @include tablets() {
+      width: 90%;
+      align-items: center;
+      text-align: center;
+      margin-left: 0;
+    }
+    @include phones() {
+      width: 100%;
+    }
+  }
+  &__burger {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-pic {
+      width: 100%;
+
+      @include tablets() {
+        width: 80%;
+      }
+      @include phones() {
+        width: 90%;
+      }
+    }
+  }
+  &__title {
+    margin-bottom: 2.525rem;
+
+    @include phones() {
+      margin-bottom: 1.4rem;
+
+    }
+  }
+  &__kkal {
+    position: absolute;
+    bottom: 1%;
+    left: 0.5%;
+    width: 5.625rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: .6;
+
+    @include tablets() {
+      bottom: initial;
+      left: initial;
+      top: 0;
+      right: 0;
+    }
+    @include phones() {
+      bottom: initial;
+      left: initial;
+      top: 0;
+      right: 0;
+    }
+  }
+  &__kkal-icon {
+    width: 3.75rem;
+    height: 5rem;
+
+    @include tablets() {
+      width: 3.75rem;
+      height: 3.3rem;
+    }
+    @include phones {
+      width: 3.75rem;
+      height: 3.3rem;
+    }
+  }
+  &__kkal-quan, &__kkal-name {
+    color: #ffffff;
+    @include gagalin();
+  }
+  &__kkal-quan {
+    font-size: rem(20px);
+    position: inherit;
+    bottom: 39%;
+  }
+  &__kkal-name {
+    font-size: rem(14px);
+  }
+  &__description {
+    margin-bottom: 0.225rem;
+
+    @include phones() {
+      margin-bottom: 0;
+
+    }
+  }
+  &__description-text {
+    @include ubuntu($style: light);
+    color: #ffffff;
+  }
+  &__price {
+    display: flex;
+    align-items: baseline;
+  }
+  &__price-digits, &__price-currency {
+    @include gagalin();
+    color: $red;
+  }
+  &__price-digits {
+    font-size: rem(69.5px);
+
+    @include tablets() {
+      font-size: 5rem;
+    }
+    @include phones() {
+      font-size: 3.7rem;
+    }
+  }
+  &__price-currency {
+    font-size: rem(29px);
+    margin-left: rem(5px);
+    margin-right: rem(28px);
+
+    @include tablets() {
+      font-size: 2rem;
+    }
+    @include phones() {
+      font-size: 1.7rem;
+    }
+  }
+  &__description-text {
+    font-size: rem(14px);
+    line-height: rem(24px);
+
+    @include tablets() {
+      font-size: 1rem;
+      line-height: 1.8rem;
+    }
+    @include phones() {
+      font-size: rem(17px);
+      line-height: 1.8rem;
+    }
+    @include iphoneFiveScreen() {
+      font-size: 1rem;
+      line-height: 1.6rem;
+    }
+  }
+}
