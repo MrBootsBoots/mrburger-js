@@ -91,5 +91,9 @@
       font-size: 3.85rem;
       width: 99%;
     }
+    @include iphoneFiveScreen() {
+      font-size: 3rem;
+      line-height: 2.5rem;
+    }
   }
 }

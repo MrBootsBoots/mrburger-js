@@ -6,16 +6,16 @@
   height: rem(335px);
   top: 1%;
   left: 1%;
-  cursor: pointer;
   overflow: hidden;
 
   @include tablets() {
-    top: 10.9%;
-    left: 9.6%;
+    top: 0;
+    left: 0;
   }
   @include phones() {
-    top: 6.5%;
-    left: 1%;
+    width: 20.5rem;
+    top: 0;
+    left: 0;
   }
 
   &__container {
@@ -27,6 +27,7 @@
     justify-content: center;
     background-color: #f08c33;
     border-radius: 10%;
+    cursor: pointer;
 
     &:hover {
       background-color: $red;
@@ -34,8 +35,8 @@
     }
 
     @include tablets() {
-      width: 5.625rem;
-      height: 5.625rem;
+      width: 4.625rem;
+      height: 4.625rem;
     }
     @include phones() {
       width: 4.625rem;
@@ -52,11 +53,17 @@
     display: none;
     flex-direction: column;
     justify-content: space-around;
+    cursor: pointer;
+
   }
   &__picture-icon {
     width: rem(48px);
     height: rem(48px);
 
+    @include tablets() {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
     @include phones() {
       width: 2.5rem;
       height: 2.5rem;
