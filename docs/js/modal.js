@@ -78,18 +78,19 @@ const overlay = (function () {
 // AJAX
 
 var ajaxForm = function (form) { // send request
-  var data = {
-    name: form.elements.name.value,
-    phone: form.elements.phone.value,
-    comment: form.elements.comment.value,
-    to: "ilia.kniazev1@gmail.com"
-  },
-    url = 'https://webdev-api.loftschool.com/fail';
+  let formData = new FormData()
+    formData.append('name', form.elements.name.value);
+    formData.append('phone', form.elements.phone.value);
+    formData.append('comment', form.elements.comment.value);
+    formData.append('to', "ilia.kniazev1@gmail.com");
+
+  let url = 'https://webdev-api.loftschool.com/sendmail';
 
   const xhr = new XMLHttpRequest();
   xhr.responseType = 'json';
   xhr.open('POST', url);
-  xhr.send(JSON.stringify(data));
+  xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+  xhr.send(formData);
 
   return xhr;
 }
