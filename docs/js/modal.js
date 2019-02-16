@@ -6,7 +6,7 @@ let reviewOpen = function (content) {
   container.addEventListener('click', e => {
     e.preventDefault();
     let target = e.target;
-    if (target.className === 'review__btn') {
+    if (target.className === 'btn btn_background_black') {
       overlay.open('#modal-review', content);
     }
   });
@@ -73,7 +73,7 @@ const overlay = (function () {
     close: closeOverlay,
     setContent: setContent
   }
-});
+})();
 
 // AJAX
 
