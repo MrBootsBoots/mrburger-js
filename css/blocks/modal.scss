@@ -19,4 +19,44 @@
     background: #ffffff;
     height: auto;
   }
+  &__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: rem(32px);
+    height: rem(32px);
+    opacity: 0.8;
+    text-decoration: none;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:before, &:after {
+      position: absolute;
+      left: rem(15px);
+      content: '';
+      height: rem(20px);
+      width: rem(4px);
+      background-color: $red;
+      border-radius: 25%;
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.modal-review.active {
+  display: flex;
 }
