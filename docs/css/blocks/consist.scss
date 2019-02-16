@@ -1,4 +1,4 @@
-.popup {
+.consist {
   position: absolute;
   display: flex;
   flex-direction: row;
@@ -32,7 +32,7 @@
       background-color: $red;
       transition: color .3s;
     }
-    &:hover .popup__content {
+    &:hover .consist__content {
       display: flex;
     }
     @include tablets() {
