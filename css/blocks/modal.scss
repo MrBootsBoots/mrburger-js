@@ -19,6 +19,29 @@
     background: #ffffff;
     height: auto;
   }
+  &__title {
+    @include gagalin;
+    font-size: rem(14px);
+
+    @include tablets() {
+      font-size: rem(16px);
+    }
+    @include phones() {
+      font-size: rem(22px);
+    }
+  }
+  &__content {
+    @include ubuntu($style: light);
+    font-size: rem(14px);
+    line-height: rem(24px);
+    overflow: hidden;
+
+    @include tablets() {
+      font-size: rem(16px);
+      margin-top: rem(10px);
+      margin-bottom: rem(10px);
+    }
+  }
   &__close {
     position: absolute;
     right: 0;
