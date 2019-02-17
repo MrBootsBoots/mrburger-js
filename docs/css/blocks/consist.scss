@@ -57,7 +57,14 @@
     cursor: pointer;
     position: absolute;
     top: 1%;
-    left: 21%;
+    left: 100%;
+
+    @include tablets() {
+      left: 80%;
+    }
+    @include phones() {
+      left: 22%;
+    }
   }
   &__picture-icon {
     width: rem(48px);

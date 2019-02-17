@@ -84,7 +84,7 @@ var ajaxForm = function (form) { // send request
     formData.append('comment', form.elements.comment.value);
     formData.append('to', "ilia.kniazev1@gmail.com");
 
-  let url = 'https://webdev-api.loftschool.com/sendmail';
+  let url = 'https://webdev-api.loftschool.com/sendmail/';
 
   const xhr = new XMLHttpRequest();
   xhr.responseType = 'json';
@@ -108,6 +108,10 @@ var submitForm = function (e) { // обратотка ответа с серве
       let content = request.response.message;
       overlay.open('#modal-review', content);
     }
+
+    setTimeout(() => {
+      overlay.close('#modal-review', content);
+    }, 3000);
   });
 }
 
