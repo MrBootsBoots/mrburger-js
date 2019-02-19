@@ -8,14 +8,17 @@ let linkB = document.querySelector('.order__button');
 
 let reviewOpen = function (content) {
   let container = document.querySelector('.reviews__list');
+  let containerItems = container.getElementsByClassName('reviews__item');
+  let reviewsText = containerItems.textContent;
 
-  container.addEventListener('click', e => {
-    e.preventDefault();
-    let target = e.target;
-    if (target.className === 'btn btn_background_black') {
-      overlay.open('#modal-review', content, linkA);
-    }
-  });
+  for (i = 0; i < containerItems.length; i++) {
+    containerItems[i].addEventListener('click', e => {
+      e.preventDefault();
+      let target = e.target;
+      if (target.className === 'btn btn_background_black') {
+        overlay.open(reviewsText, content, linkA);
+      }
+    });}
 }
 content = document.querySelector('#overlay1').innerHTML;
 reviewOpen(content);
