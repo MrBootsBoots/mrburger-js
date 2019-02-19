@@ -31,7 +31,9 @@
 
   @include tablets() {
     height: initial;
-
+  }
+  @include phones() {
+    height: 100%;
   }
 
   &__list {
@@ -94,14 +96,18 @@
     align-items: center;
     justify-content: center;
 
+    @include phones() {
+      align-items: flex-end;
+    }
+
     &-pic {
       width: 100%;
 
       @include tablets() {
-        width: 80%;
+        width: 70%;
       }
       @include phones() {
-        width: 90%;
+        width: 80%;
       }
     }
   }
@@ -133,8 +139,12 @@
     @include phones() {
       bottom: initial;
       left: initial;
-      top: 0;
+      top: 30%;
       right: 0;
+    }
+    @include iphoneScreen() {
+      width: 3.625rem;
+      top: 19%;
     }
   }
   &__kkal-icon {
@@ -216,7 +226,7 @@
       font-size: rem(17px);
       line-height: 1.8rem;
     }
-    @include iphoneFiveScreen() {
+    @include iphoneScreen() {
       font-size: 1rem;
       line-height: 1.6rem;
     }

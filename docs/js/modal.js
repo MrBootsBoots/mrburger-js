@@ -1,7 +1,7 @@
 // open review
 
 let linkA = document.querySelector('.modal-review__close');
-let linkB = document.querySelector('.btn');
+let linkB = document.querySelector('.order__button');
     linkB.textContent = "закрыть";
     linkB.style.alignSelf = "center";
     linkB.style.marginTop = "15px";
@@ -119,7 +119,7 @@ var submitForm = function (e) { // обратотка ответа с серве
 
     setTimeout(() => {
       overlay.close('#modal-review', content, linkB);
-    }, 300000);
+    }, 3000);
   });
 }
 
