@@ -1,5 +1,11 @@
 // open review
 
+let linkA = document.querySelector('.modal-review__close');
+let linkB = document.querySelector('.btn');
+    linkB.textContent = "закрыть";
+    linkB.style.alignSelf = "center";
+    linkB.style.marginTop = "15px";
+
 let reviewOpen = function (content) {
   let container = document.querySelector('.reviews__list');
 
@@ -7,7 +13,7 @@ let reviewOpen = function (content) {
     e.preventDefault();
     let target = e.target;
     if (target.className === 'btn btn_background_black') {
-      overlay.open('#modal-review', content);
+      overlay.open('#modal-review', content, linkA);
     }
   });
 }
@@ -23,7 +29,7 @@ const overlay = (function () {
   link.classList.add('modal-review__close');
   link.setAttribute('href', '#');
 
-  let openOverlay = function (modalId, content) {
+  let openOverlay = function (modalId, content, link) {
     let overlay = document.querySelector(modalId);
     let innerOverlay = overlay.querySelector('.modal-review__inner');
 
@@ -35,9 +41,11 @@ const overlay = (function () {
     overlay.classList.add('active'); // add class and show modal
     body.classList.add('locked');
 
+    link.classList.add('active');
     link.addEventListener('click', e => { // close btn onclick event
       e.preventDefault();
       closeOverlay(modalId); // close
+      link.classList.remove('active');
     });
 
     overlay.addEventListener('click', e => { // click outside modal
@@ -106,12 +114,12 @@ var submitForm = function (e) { // обратотка ответа с серве
       overlay.open('#modal-review', `${content}. Ошибка ${request.status}`)
     } else {
       let content = request.response.message;
-      overlay.open('#modal-review', content);
+      overlay.open('#modal-review', content, linkB);
     }
 
     setTimeout(() => {
-      overlay.close('#modal-review', content);
-    }, 3000);
+      overlay.close('#modal-review', content, linkB);
+    }, 300000);
   });
 }
 

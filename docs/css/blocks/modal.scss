@@ -8,6 +8,8 @@
   bottom: 0;
 
   &__inner {
+    display: flex;
+    flex-direction: column;
     max-width: 28.125rem;
     padding: 1.5625rem 1.25rem;
     padding-right: rem(20px);
@@ -83,4 +85,8 @@
 
 .modal-review.active {
   display: flex;
+}
+
+.order__btn {
+  align-self: center;
 }
