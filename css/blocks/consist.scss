@@ -13,8 +13,11 @@
   }
   @include phones() {
     width: 20.5rem;
-    top: 0;
+    top: 30%;
     left: 0;
+  }
+  @include iphoneScreen() {
+    top: 20%;
   }
 
   &__container {
@@ -43,6 +46,10 @@
       width: 4.625rem;
       height: 4.625rem;
     }
+    @include iphoneScreen() {
+      width: 3.5rem;
+      height: 4rem;
+    }
   }
   &__content {
     width: rem(270px);
@@ -64,6 +71,11 @@
     }
     @include phones() {
       left: 22%;
+      width: 13.7rem;
+      height: 17.9375rem;
+    }
+    @include iphoneScreen() {
+      left: 17.3%;
     }
   }
   &__picture-icon {
@@ -77,6 +89,10 @@
     @include phones() {
       width: 2.5rem;
       height: 2.5rem;
+    }
+    @include iphoneScreen() {
+      width: 2.2rem;
+      height: 2.2rem;
     }
   }
   &__picture-name {
