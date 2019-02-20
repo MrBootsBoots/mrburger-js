@@ -1,13 +1,12 @@
-.modal-review {
-  display: none;
-  background: rgba(0, 0, 0, 0.603);
+.popup {
+  // display: none;
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
 
-  &__inner {
+  &__container {
     display: flex;
     flex-direction: column;
     max-width: 28.125rem;
@@ -83,11 +82,11 @@
   }
 }
 
-.modal-review.active {
+.popup.active {
   display: flex;
 }
 
-.order__button {
+.popup__button {
   align-self: center;
   @include ubuntu($style: medium);
 
@@ -106,4 +105,13 @@
   @include tablets() {
     font-size: rem(16px);
   }
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.603);
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
 }

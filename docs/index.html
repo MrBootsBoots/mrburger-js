@@ -1102,23 +1102,16 @@
     <!-- wrapper closed -->
   </div>
 
-  <div class="modal-review" id="modal-review">
-    <div class="modal-review__inner">
-      <div class="modal-review__title"></div>
-      <div class="modal-review__content"></div>
-      <div class="modal-review__close"></div>
-      <div class="order__button"></div>
-    </div>
-  </div>
 
-  <script type="template" id="overlay1">
-    <div class="modal-review__title">Константин Спилберг</div>
-    <div class="modal-review__content">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
-    Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной,
-    а сыр таким расплавленным.Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
-    Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной,
-    а сыр таким расплавленным.</div>
-    <div class="modal-review__close"></div>
+
+  <script type="template" id="modal-template">
+    <div class="overlay">
+      <div class="popup__container">
+        <div class="popup__title"></div>
+        <div class="popup__content"></div>
+        <div class="popup__close"></div>
+      </div>
+    </div>
   </script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -1126,7 +1119,6 @@
   <script src="js/product-slider.js"></script>
   <script src="js/modal.js"></script>
   <script src="js/acco.js"></script>
-  <script src="js/order-form.js"></script>
   <script src="js/form-input-numbers.js"></script>
 
 </body>
