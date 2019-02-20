@@ -1,92 +1,47 @@
-// open review
+const button = document.querySelector('.btn_background_black');
+const orderButton = document.querySelector('#send');
+const template = document.querySelector('#modal-template').innerHTML;
+const modal = createModal();
 
-let linkA = document.querySelector('.modal-review__close');
-let linkB = document.querySelector('.order__button');
-    linkB.textContent = "закрыть";
-    linkB.style.alignSelf = "center";
-    linkB.style.marginTop = "15px";
+button.addEventListener('click', e => {
+  modal.setContent();
+  modal.open();
+});
 
-let reviewOpen = function (content) {
-  let container = document.querySelector('.reviews__list');
-  let containerItems = container.getElementsByClassName('reviews__item');
-  let reviewsText = containerItems.textContent;
+function createModal(content) {
+  const container = document.createElement('div');
+  container.className = 'popup';
+  container.innerHTML = template;
 
-  for (i = 0; i < containerItems.length; i++) {
-    containerItems[i].addEventListener('click', e => {
-      e.preventDefault();
-      let target = e.target;
-      if (target.className === 'btn btn_background_black') {
-        overlay.open(reviewsText, content, linkA);
-      }
-    });}
-}
-content = document.querySelector('#overlay1').innerHTML;
-reviewOpen(content);
+  const contentBlock = container.querySelector('.popup__content')
 
-// Modal
+  const closeBtn = container.querySelector('.popup__close');
+  closeBtn.addEventListener('click', e => {
+    document.body.removeChild(container);
+  });
 
-const overlay = (function () {
-  let body = document.querySelector('body');
-  let link = document.createElement('a'); // create link
-
-  link.classList.add('modal-review__close');
-  link.setAttribute('href', '#');
-
-  let openOverlay = function (modalId, content, link) {
-    let overlay = document.querySelector(modalId);
-    let innerOverlay = overlay.querySelector('.modal-review__inner');
-
-    if(content) {
-      innerOverlay.innerHTML = content;
+  const overlay = container.querySelector('.overlay');
+  overlay.addEventListener('click', e => {
+    if (e.target === overlay) {
+      document.body.removeChild(container);
     }
-    innerOverlay.appendChild(link); // add close link after all modal content
+  });
 
-    overlay.classList.add('active'); // add class and show modal
-    body.classList.add('locked');
 
-    link.classList.add('active');
-    link.addEventListener('click', e => { // close btn onclick event
-      e.preventDefault();
-      closeOverlay(modalId); // close
-      link.classList.remove('active');
-    });
-
-    overlay.addEventListener('click', e => { // click outside modal
-      e.preventDefault();
-      if (e.target === overlay) {
-        closeOverlay(modalId); // close
-      }
-    });
-
-    document.addEventListener('keydown', e => {
-      if (e.keyCode == 27) closeOverlay(modalId); // close if ESC clicked
-    });
-  }
-
-  let closeOverlay = function (modalId) {
-    let overlay = document.querySelector(modalId);
-
-    overlay.classList.remove('active');
-    body.classList.remove('locked');
-  }
-
-  let setContent = function (modalId, content) {
-    let overlay = document.querySelector(modalId);
-    let innerOverlay = overlay.querySelector('.modal-review__inner');
-
-    if(content) {
-      innerOverlay.innerHTML = content;
-      innerOverlay.appendChild(link); // add close link after all modal content
-    }
-  }
   return {
-    open: openOverlay,
-    close: closeOverlay,
-    setContent: setContent
-  }
-})();
+    open() {
+      document.body.appendChild(container);
+    },
+    close() {
+      document.body.removeChild(container);
+    },
+    setContent(content) {
+      contentBlock.innerHTML = content;
+    }
+  };
+}
 
-// AJAX
+// ajax
 
 var ajaxForm = function (form) { // send request
   let formData = new FormData()
@@ -114,17 +69,39 @@ var submitForm = function (e) { // обратотка ответа с серве
   request.addEventListener('load', () => {
     if (request.status >= 400) {
       let content = "Ошибка соединения с сервером, попробуйте позже";
-      overlay.open('#modal-review', `${content}. Ошибка ${request.status}`)
+      overlay.open(`${content}. Ошибка ${request.status}`)
     } else {
       let content = request.response.message;
-      overlay.open('#modal-review', content, linkB);
+      overlay.open(content, orderButton);
     }
 
     setTimeout(() => {
-      overlay.close('#modal-review', content, linkB);
+      overlay.close(content, orderButton);
     }, 3000);
   });
 }
-
 let orderForm = document.querySelector('#order-form');
 orderForm.addEventListener('submit', submitForm);
+
+// проверка правильности заполен
+function validateForm(form) {
+  let valid = true;
+
+  if (!validateField(form.elements.name)) {
+    valid = false;
+  }
+  if (!validateField(form.elements.phone)) {
+    valid = false;
+  }
+  if (!validateField(form.elements.comment)) {
+    valid = false;
+  }
+
+  return valid;
+}
+
+function validateField(field) {
+    field.nextElementSibling.textContent = field.validationMessage;
+
+    return field.checkValidity();
+}
