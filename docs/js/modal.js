@@ -1,12 +1,24 @@
-const button = document.querySelector('.btn_background_black');
+const buttons = document.querySelectorAll('.reviews__btn');
 const orderButton = document.querySelector('#send');
+const reviews = document.querySelectorAll('.reviews__item-hover');
 const template = document.querySelector('#modal-template').innerHTML;
 const modal = createModal();
 
-button.addEventListener('click', e => {
-  modal.setContent();
-  modal.open();
-});
+for (var button of buttons) {
+  button.addEventListener('click', e => {
+    modal.setContent();
+    modal.open();
+  });
+};
+
+for (var review of reviews) {
+  review.addEventListener('click', e => {
+    let content = review.cloneNode(true),
+    btn = content.querySelector('.reviews__btn');
+    content.removeChild(btn);
+    modal.setContent(content.innerHTML);
+  })
+};
 
 function createModal(content) {
   const container = document.createElement('div');
@@ -69,21 +81,21 @@ var submitForm = function (e) { // обратотка ответа с серве
   request.addEventListener('load', () => {
     if (request.status >= 400) {
       let content = "Ошибка соединения с сервером, попробуйте позже";
-      overlay.open(`${content}. Ошибка ${request.status}`)
+      modal.open(`${content}. Ошибка ${request.status}`)
     } else {
       let content = request.response.message;
-      overlay.open(content, orderButton);
+      modal.open(content);
     }
 
     setTimeout(() => {
-      overlay.close(content, orderButton);
+      modal.close(content);
     }, 3000);
   });
 }
 let orderForm = document.querySelector('#order-form');
 orderForm.addEventListener('submit', submitForm);
 
-// проверка правильности заполен
+// проверка правильности заполнения
 function validateForm(form) {
   let valid = true;
 
