@@ -1,23 +1,24 @@
-const button = document.querySelector('.btn_background_black');
+const buttons = document.querySelectorAll('.reviews__btn');
 const orderButton = document.querySelector('#send');
-const reviews = document.querySelectorAll('.reviews__list')
+const reviews = document.querySelectorAll('.reviews__item-hover');
 const template = document.querySelector('#modal-template').innerHTML;
 const modal = createModal();
 
-button.addEventListener('click', e => {
-  modal.setContent();
-  modal.open();
-});
+for (var button of buttons) {
+  button.addEventListener('click', e => {
+    modal.setContent();
+    modal.open();
+  });
+};
 
 for (var review of reviews) {
-  review.addEventListener('click', function() {
-    let content = document.querySelector('.reviews__item-hover').innerHTML;
-    let contentBlock = document.querySelector('.reviews__item-hover');
-    let btnBlock = document.querySelector('.reviews__btn');
-    modal.setContent(content);
-    contentBlock.removeChild(btnBlock);
+  review.addEventListener('click', e => {
+    let content = review.cloneNode(true),
+    btn = content.querySelector('.reviews__btn');
+    content.removeChild(btn);
+    modal.setContent(content.innerHTML);
   })
-}
+};
 
 function createModal(content) {
   const container = document.createElement('div');
@@ -83,11 +84,11 @@ var submitForm = function (e) { // обратотка ответа с серве
       modal.open(`${content}. Ошибка ${request.status}`)
     } else {
       let content = request.response.message;
-      modal.open(content, orderButton);
+      modal.open(content);
     }
 
     setTimeout(() => {
-      modal.close(content, orderButton);
+      modal.close(content);
     }, 3000);
   });
 }
