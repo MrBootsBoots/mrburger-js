@@ -7,7 +7,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "gulp": "gulp"
+    "gulp": "cross-env NODE_ENV=dev gulp",
+    "build": "cross-env NODE_ENV=prod gulp build"
   },
   "repository": {
     "type": "git",
@@ -24,12 +25,14 @@
     "@babel/core": "^7.3.3",
     "@babel/preset-env": "^7.3.1",
     "browser-sync": "^2.26.3",
+    "cross-env": "^5.2.0",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-if": "^2.0.2",
     "gulp-rm": "^2.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-sass-glob": "^1.0.9",
