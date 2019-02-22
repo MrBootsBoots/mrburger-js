@@ -32,6 +32,12 @@ function createModal(content) {
     document.body.removeChild(container);
   });
 
+  const orderBtn = container.querySelector('.btn_popup_close');
+  orderBtn.innerText = 'ЗАКРЫТЬ';
+  orderBtn.addEventListener('click', e => {
+    document.body.removeChild(container);
+  });
+
   const overlay = container.querySelector('.overlay');
   overlay.addEventListener('click', e => {
     if (e.target === overlay) {
@@ -49,6 +55,13 @@ function createModal(content) {
     },
     setContent(content) {
       contentBlock.innerHTML = content;
+    },
+    hideSmallBtn() {
+      closeBtn.style.display = 'none';
+    },
+    showButton() {
+      orderBtn.style.display = 'flex';
+      orderBtn.style.alignSelf = 'center';
     }
   };
 }
@@ -75,6 +88,7 @@ var ajaxForm = function (form) { // send request
 
 var submitForm = function (e) { // обратотка ответа с сервера
   e.preventDefault();
+
   var form = e.target;
   let request = ajaxForm(form);  // присваиваем ответ сервера в переменную request
 
@@ -82,16 +96,20 @@ var submitForm = function (e) { // обратотка ответа с серве
     if (request.status >= 400) {
       let content = "Ошибка соединения с сервером, попробуйте позже";
       modal.setContent(`${content}. Ошибка ${request.status}`)
-      modal.open(content)
+      modal.open(content);
+      modal.hideSmallBtn();
+      modal.showButton();
     } else {
       let content = request.response.message;
       modal.setContent(content);
-      modal.open(content)
+      modal.open(content);
+      modal.hideSmallBtn();
+      modal.showButton();
     }
 
     setTimeout(() => {
       modal.close();
-    }, 3000);
+    }, 30222300);
   });
 }
 let orderForm = document.querySelector('#order-form');
