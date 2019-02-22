@@ -81,14 +81,16 @@ var submitForm = function (e) { // обратотка ответа с серве
   request.addEventListener('load', () => {
     if (request.status >= 400) {
       let content = "Ошибка соединения с сервером, попробуйте позже";
-      modal.open(`${content}. Ошибка ${request.status}`)
+      modal.setContent(`${content}. Ошибка ${request.status}`)
+      modal.open(content)
     } else {
       let content = request.response.message;
-      modal.open(content);
+      modal.setContent(content);
+      modal.open(content)
     }
 
     setTimeout(() => {
-      modal.close(content);
+      modal.close();
     }, 3000);
   });
 }
