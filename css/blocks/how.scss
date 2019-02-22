@@ -1,4 +1,15 @@
 .how {
   background: url('/images/how_bg.png') center center no-repeat;
   background-size: cover;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__video {
+    width: rem(660px);
+    min-height: rem(405px);
+  }
 }
