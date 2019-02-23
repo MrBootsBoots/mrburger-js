@@ -2,6 +2,10 @@ const sections = $('.section');
 const display = $('.maincontent');
 let inscroll = false;
 
+const md = new MobileDetect(window.navigator.userAgent);
+
+const isMobile = md.mobile();
+
 const switchActiveClassFixedMenu = menuItemIndex => {
   $('.fixed-menu__item')
     .eq(menuItemIndex)
@@ -57,6 +61,10 @@ $('.wrapper').on('wheel', e => {
   }
 });
 
+$('.wrapper').on('touchmove', e => {
+  e.preventDefault();
+}); // mobile up-scroll data-scroll 0 prevention
+
 $(document).on('keydown', e => {
   switch(e.keyCode) {
     case 38:
@@ -70,4 +78,13 @@ $('[data-scroll-to]').on('click', e => {
   e.preventDefault();
   const target = $(e.currentTarget).attr('data-scroll-to');
   makeTransition(target);
-})
+});
+
+if (isMobile) {
+  $(window).swipe({
+    swipe: function(event, direction) {
+      const nextOrPrev = direction === 'up' ? 'next' : 'prev';
+      scrollToSection(nextOrPrev);
+    }
+  })
+};

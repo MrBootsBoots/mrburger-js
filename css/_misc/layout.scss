@@ -48,8 +48,9 @@ body {
 }
 
 .section {
-  height: 100vh;
-  // min-height: 650px;
+  // height: 100vh;
+  height: 100%;
+
 
   &_centered {
     .section-title {

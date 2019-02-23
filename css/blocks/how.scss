@@ -9,7 +9,12 @@
     justify-content: center;
   }
   &__video {
-    width: rem(660px);
-    min-height: rem(405px);
+    width: 74%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__video-player {
+    width: 100%;
   }
 }
