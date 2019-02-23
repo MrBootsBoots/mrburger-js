@@ -13,3 +13,21 @@
     @content;
   }
 }
+
+@mixin headerFontSize {
+  @media screen and (max-width: 915px) {
+    @content;
+  }
+}
+
+@mixin iphoneFiveScreen {
+  @media screen and (max-width: 320px) {
+    @content;
+  }
+}
+
+@mixin iphoneScreen {
+  @media screen and (max-width: 414px) {
+    @content;
+  }
+}

@@ -29,6 +29,7 @@
   }
   &_hero {
     margin-bottom: rem(25px);
+    white-space: nowrap;
 
     @include tablets() {
       margin-bottom: 1rem;
@@ -89,6 +90,10 @@
     @include phones() {
       font-size: 3.85rem;
       width: 99%;
+    }
+    @include iphoneFiveScreen() {
+      font-size: 3rem;
+      line-height: 2.5rem;
     }
   }
 }

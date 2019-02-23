@@ -1,0 +1,117 @@
+.popup {
+  // display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    max-width: 28.125rem;
+    padding: 1.5625rem 1.25rem;
+    padding-right: rem(20px);
+    border-radius: rem(5px);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    height: auto;
+  }
+  &__title {
+    @include gagalin;
+    font-size: rem(14px);
+    margin-bottom: rem(20px);
+
+    @include tablets() {
+      font-size: rem(16px);
+    }
+    @include phones() {
+      font-size: rem(22px);
+    }
+  }
+  &__content {
+    @include ubuntu($style: light);
+    font-size: rem(14px);
+    line-height: rem(24px);
+    overflow: hidden;
+
+    @include tablets() {
+      font-size: rem(16px);
+      margin-top: rem(10px);
+      margin-bottom: rem(10px);
+    }
+  }
+  &__close {
+    position: absolute;
+    right: 3%;
+    top: 7%;
+    width: rem(32px);
+    height: rem(32px);
+    opacity: 0.8;
+    text-decoration: none;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:before, &:after {
+      position: absolute;
+      left: rem(15px);
+      content: '';
+      height: rem(20px);
+      width: rem(4px);
+      background-color: $red;
+      border-radius: 25%;
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.popup.active {
+  display: flex;
+}
+
+.popup__button {
+  align-self: center;
+  @include ubuntu($style: medium);
+
+  padding: rem(8px) rem(15px);
+  background: $red;
+  color: #fff;
+  text-decoration: none;
+  outline: none;
+  border-radius: rem(5px);
+  border-color: transparent;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: rem(13px);
+  cursor: pointer;
+
+  @include tablets() {
+    font-size: rem(16px);
+  }
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.603);
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}

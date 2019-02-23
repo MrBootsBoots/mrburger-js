@@ -24,17 +24,29 @@
 
 .slider {
   height: 100%;
+  width: 100%;
+  // width: 125rem;
+  display: flex;
+  overflow: hidden;
 
   @include tablets() {
     height: initial;
-
+  }
+  @include phones() {
+    height: 100%;
   }
 
   &__list {
+    position: relative;
     height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    right: 0; // 58rem - ширина слайда
+    transition: right .3s;
   }
   &__item {
     height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -52,6 +64,7 @@
     justify-content: space-between;
   }
   &__left {
+    position: relative;
     justify-content: center;
 
     @include tablets() {
@@ -83,14 +96,18 @@
     align-items: center;
     justify-content: center;
 
+    @include phones() {
+      align-items: flex-end;
+    }
+
     &-pic {
-      width: 105%;
+      width: 100%;
 
       @include tablets() {
-        width: 80%;
+        width: 70%;
       }
       @include phones() {
-        width: 90%;
+        width: 80%;
       }
     }
   }
@@ -104,8 +121,8 @@
   }
   &__kkal {
     position: absolute;
-    bottom: 11.7%;
-    left: 2.3%;
+    bottom: 1%;
+    left: 0.5%;
     width: 5.625rem;
     display: flex;
     justify-content: center;
@@ -116,14 +133,18 @@
     @include tablets() {
       bottom: initial;
       left: initial;
-      top: 10.9%;
-      right: 12%;
+      top: 0;
+      right: 0;
     }
     @include phones() {
       bottom: initial;
       left: initial;
-      top: 6.5%;
+      top: 30%;
       right: 0;
+    }
+    @include iphoneScreen() {
+      width: 3.625rem;
+      top: 19%;
     }
   }
   &__kkal-icon {
@@ -131,8 +152,8 @@
     height: 5rem;
 
     @include tablets() {
-      width: 4.75rem;
-      height: 4.3rem;
+      width: 3.75rem;
+      height: 3.3rem;
     }
     @include phones {
       width: 3.75rem;
@@ -204,6 +225,10 @@
     @include phones() {
       font-size: rem(17px);
       line-height: 1.8rem;
+    }
+    @include iphoneScreen() {
+      font-size: 1rem;
+      line-height: 1.6rem;
     }
   }
 }
