@@ -245,8 +245,7 @@
                       <p class="slider__description-text">
                         Пышная черная булочка, сочная котлета из мраморной говядины, хрустящий копченый бекон
                         индейки, жареные с луком грибы в соусе демиглас, спелые помидоры, два вида
-                        сыров: нежный фета и чеддер, кольца красного лука, листья салата, карамелизированная груша,
-                        смородиновый джем, соус релиш, наш фирменный соус с трюфельным маслом и паштет из фуагра.
+                        сыров, наш фирменный соус с трюфельным маслом и паштет из фуагра.
                       </p>
                     </div>
                     <div class="slider__price">
@@ -520,8 +519,7 @@
                       <p class="slider__description-text">
                         Неизменно любимая вечная классика: тающая во рту домашняя булочка,
                         сочная котлета из мраморной говядины, или индейки, хрустящий копчёный
-                        бекон индейки, маринованные огурцы, кольца красного лука, сыр чеддер,
-                        спелые помидоры, листья салата и наш фирменный соус с трюфельным маслом.
+                        бекон индейки, маринованные огурцы.
                       </p>
                     </div>
                     <div class="slider__price">
@@ -612,8 +610,7 @@
                       <p class="slider__description-text">
                         Ничего лишнего, только сырные шарики из двух видов сыра – моцарелла и чеддер,
                         спелые помидоры, листья салата, бабагануш, соус зеленый карри, релиш и наша
-                        фирменная заправка с трюфельным маслом. Весь этот вегетарианский рай обрамляет
-                        пышная свежайшая булочка.
+                        фирменная заправка с трюфельным маслом.
                       </p>
                     </div>
                     <div class="slider__price">
@@ -1118,27 +1115,24 @@
     <!-- wrapper closed -->
   </div>
 
-  <div class="modal-review" id="modal-review">
-    <div class="modal-review__inner">
-      <div class="modal-review__title"></div>
-      <div class="modal-review__content"></div>
-    </div>
-  </div>
 
-  <script type="template" id="overlay1">
-    <div class="modal-review__title">Константин Спилберг</div>
-    <div class="modal-review__content">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
-    Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной,
-    а сыр таким расплавленным.Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
-    Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной,
-    а сыр таким расплавленным.</div>
+
+  <script type="template" id="modal-template">
+    <div class="overlay">
+      <div class="popup__container">
+        <div class="popup__title"></div>
+        <div class="popup__content"></div>
+        <div class="popup__close"></div>
+        <div class="btn btn_popup_close"></div>
+      </div>
+    </div>
   </script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/hamburger-menu.js"></script>
   <script src="js/product-slider.js"></script>
   <script src="js/modal.js"></script>
   <script src="js/acco.js"></script>
-  <script src="js/order-form.js"></script>
   <script src="js/form-input-numbers.js"></script>
   <script src="js/map.js"></script>
 
