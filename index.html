@@ -21,7 +21,7 @@
   <div class="wrapper">
     <div class="maincontent">
 
-      <section class="section hero" id="hero">
+      <section class="section hero active" id="hero">
         <div class="container hero__container">
 
           <header class="header">
@@ -37,31 +37,31 @@
                 <nav class="nav">
                   <ul class="nav__list">
                     <li class="nav__item">
-                      <a href="#about" class="nav__link">О нас</a>
+                      <a href data-scroll-to="1" class="nav__link">О нас</a>
                     </li>
                     <li class="nav__item">
-                      <a href="#burgers" class="nav__link">Бургеры</a>
+                      <a href data-scroll-to="2" class="nav__link">Бургеры</a>
                     </li>
                     <li class="nav__item">
-                      <a href="#team" class="nav__link">Команда</a>
+                      <a href data-scroll-to="3" class="nav__link">Команда</a>
                     </li>
                     <li class="nav__item">
-                      <a href="#menu" class="nav__link">Меню</a>
+                      <a href data-scroll-to="4" class="nav__link">Меню</a>
                     </li>
                     <li class="nav__item">
-                      <a href="#feedback" class="nav__link">Отзывы</a>
+                      <a href data-scroll-to="5" class="nav__link">Отзывы</a>
                     </li>
                     <li class="nav__item">
-                      <a href="#how" class="nav__link">Как мы работаем</a>
+                      <a href data-scroll-to="6" class="nav__link">Как мы работаем</a>
                     </li>
                     <li class="nav__item">
-                      <a href="#map" class="nav__link">Контакты</a>
+                      <a href data-scroll-to="8" class="nav__link">Контакты</a>
                     </li>
                   </ul>
                 </nav>
               </div>
               <div class="header__links">
-                <a href="#order" class="btn hero__order-btn">Заказать</a>
+                <a href data-scroll-to="7" class="btn hero__order-btn">Заказать</a>
                   <a class="hamburger-menu-link" id="hamburger-menu-link" href="">
                     <div class="hamburger-menu-link__bars"></div>
                   </a>
@@ -1043,32 +1043,32 @@
 
     <nav class="fixed-menu">
       <ul class="fixed-menu__list">
-        <li class="fixed-menu__item fixed-menu__item_active">
-          <a href="#hero" class="fixed-menu__link"></a>
+        <li class="fixed-menu__item active">
+          <a href="" data-scroll-to="0" class="fixed-menu__link"></a>
         </li>
         <li class="fixed-menu__item">
-          <a href="#about" class="fixed-menu__link"></a>
+          <a href="" data-scroll-to="1" class="fixed-menu__link"></a>
         </li>
         <li class="fixed-menu__item">
-          <a href="#burgers" class="fixed-menu__link"></a>
+          <a href="" data-scroll-to="2" class="fixed-menu__link"></a>
         </li>
         <li class="fixed-menu__item">
-          <a href="#team" class="fixed-menu__link"></a>
+          <a href="" data-scroll-to="3" class="fixed-menu__link"></a>
         </li>
         <li class="fixed-menu__item">
-          <a href="#menu" class="fixed-menu__link"></a>
+          <a href="" data-scroll-to="4" class="fixed-menu__link"></a>
         </li>
         <li class="fixed-menu__item">
-          <a href="#feedback" class="fixed-menu__link"></a>
+          <a href="" data-scroll-to="5" class="fixed-menu__link"></a>
         </li>
         <li class="fixed-menu__item">
-          <a href="#how" class="fixed-menu__link"></a>
+          <a href="" data-scroll-to="6" class="fixed-menu__link"></a>
         </li>
         <li class="fixed-menu__item">
-          <a href="#map" class="fixed-menu__link"></a>
+          <a href="" data-scroll-to="7" class="fixed-menu__link"></a>
         </li>
         <li class="fixed-menu__item">
-          <a href="#" class="fixed-menu__link"></a>
+          <a href="" data-scroll-to="8" class="fixed-menu__link"></a>
         </li>
       </ul>
     </nav>
@@ -1129,6 +1129,7 @@
   </script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/ops.js"></script>
   <script src="js/hamburger-menu.js"></script>
   <script src="js/product-slider.js"></script>
   <script src="js/modal.js"></script>
