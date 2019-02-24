@@ -63,6 +63,7 @@ $(".player__start").on("click", e => {
 });
 
 
+
 $(".player__playback").on("click", e => {
   e.preventDefault();
   const bar = $(e.currentTarget);
@@ -98,3 +99,8 @@ function formatTime(time) {
 
   return minutes + ":" + formatedSeconds;
 }
+
+// open-close volume line
+$(".player__sound").on("click", e => {
+  $(".sound__volume").toggleClass("opened");
+});
