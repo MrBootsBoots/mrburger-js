@@ -1,0 +1,50 @@
+{
+  "name": "mrburger",
+  "version": "1.0.0",
+  "description": "1. [Main page](http://kniazev1.github.io/mrburger/ \"Перейти на приветственную страницу\")\r <!-- 2. [Страница отзывов](http://kniazev1.github.io/fitness/reviews.html \"Перейти на страницу отзывов\")\r 3. [Страница услуг](http://kniazev1.github.io/fitness/services.html \"Перейти на страницу услуг\") -->",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "gulp": "cross-env NODE_ENV=dev gulp",
+    "build": "cross-env NODE_ENV=prod gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KNIAZEV1/mrburger.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KNIAZEV1/mrburger/issues"
+  },
+  "homepage": "https://github.com/KNIAZEV1/mrburger#readme",
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "browser-sync": "^2.26.3",
+    "cross-env": "^5.2.0",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-if": "^2.0.2",
+    "gulp-rm": "^2.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.0.9",
+    "gulp-smile-px2rem": "^0.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-svgo": "^2.1.0",
+    "gulp-uglify": "^3.0.1",
+    "node-sass": "^4.11.0"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "normalize.css": "^8.0.1"
+  }
+}

@@ -17,7 +17,7 @@
   &:last-child {
     margin-bottom: 0;
   }
-  &_active {
+  &.active {
     .fixed-menu__link {
       border-color: #fff;
     }
