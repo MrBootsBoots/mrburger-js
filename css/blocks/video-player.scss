@@ -119,6 +119,20 @@
   cursor: pointer;
 }
 
+.player__sound-btn {
+  background: #626262;
+  border-radius: 50px;
+  border: none;
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  position: absolute;
+  top: 15px;
+  transform: translateY(-50%);
+  left: 0;
+  cursor: pointer;
+}
+
 .player__duration {
   position: absolute;
   top: 7px;

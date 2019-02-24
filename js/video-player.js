@@ -24,6 +24,7 @@ function onPlayerReady(event) {
   const duration = player.getDuration();
   let interval;
   updateTimerDisplay();
+  event.target.setVolume(50); // adjust the volume to 50%;
 
   $(".player").removeClass("hidden");
 
@@ -62,17 +63,26 @@ $(".start").on("click", e => {
   }
 });
 
-
-
 $(".player__playback").on("click", e => {
   e.preventDefault();
   const bar = $(e.currentTarget);
   const newButtonPosition = e.pageX - bar.offset().left;
   const clickedPercents = (newButtonPosition / bar.width()) * 100;
-  const newPlayerTime = (player.getDuration() / 100) * clickedPercents;
+  const newPlayerTime = (player.getVolume() / 100) * clickedPercents;
 
   changeButtonPosition(clickedPercents);
   player.seekTo(newPlayerTime);
+});
+
+$(".duration__length").on("click", e => {
+  e.preventDefault();
+  const soundBar = $(e.currentTarget);
+  const newSoundButtonPosition = e.pageY - soundBar.offset().top;
+  const clickedPercents = (newSoundButtonPosition / soundBar.height()) * 100;
+  const newSoundValue = (player.getDuration() / 100) * clickedPercents;
+
+  changeButtonPosition(clickedPercents);
+  player.seekTo(newSoundValue);
 });
 
 $(".player__splash").on("click", e => {
@@ -82,6 +92,12 @@ $(".player__splash").on("click", e => {
 function changeButtonPosition(percents) {
   $(".player__playback-button").css({
     left: `${percents}%`
+  });
+}
+
+function changeSoundButtonPosition(percents) {
+  $(".player__playback-button").css({
+    top: `${percents}%`
   });
 }
 
