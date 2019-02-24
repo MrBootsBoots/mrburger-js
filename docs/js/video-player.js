@@ -63,30 +63,16 @@ $(".start").on("click", e => {
   }
 });
 
+// duration bar
 $(".player__playback").on("click", e => {
   e.preventDefault();
   const bar = $(e.currentTarget);
   const newButtonPosition = e.pageX - bar.offset().left;
   const clickedPercents = (newButtonPosition / bar.width()) * 100;
-  const newPlayerTime = (player.getVolume() / 100) * clickedPercents;
+  const newPlayerTime = (player.getDuration() / 100) * clickedPercents;
 
   changeButtonPosition(clickedPercents);
   player.seekTo(newPlayerTime);
-});
-
-$(".duration__length").on("click", e => {
-  e.preventDefault();
-  const soundBar = $(e.currentTarget);
-  const newSoundButtonPosition = e.pageY - soundBar.offset().top;
-  const clickedPercents = (newSoundButtonPosition / soundBar.height()) * 100;
-  const newSoundValue = (player.getDuration() / 100) * clickedPercents;
-
-  changeButtonPosition(clickedPercents);
-  player.seekTo(newSoundValue);
-});
-
-$(".player__splash").on("click", e => {
-  player.playVideo();
 });
 
 function changeButtonPosition(percents) {
@@ -95,8 +81,24 @@ function changeButtonPosition(percents) {
   });
 }
 
+// sound bar
+$(".duration__length").on("click", e => {
+  e.preventDefault();
+  const soundBar = $(e.currentTarget);
+  const newSoundButtonPosition = e.pageY - soundBar.offset().top;
+  const clickedPercents = (newSoundButtonPosition / soundBar.height()) * 100;
+  const newSoundValue = (player.getVolume() / 100) * clickedPercents;
+
+  changeSoundButtonPosition(clickedPercents);
+  player.seekTo(newSoundValue);
+});
+
+$(".player__splash").on("click", e => {
+  player.playVideo();
+});
+
 function changeSoundButtonPosition(percents) {
-  $(".player__playback-button").css({
+  $(".player__sound-btn").css({
     top: `${percents}%`
   });
 }
