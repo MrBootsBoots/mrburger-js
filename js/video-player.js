@@ -40,7 +40,7 @@ function onPlayerReady(event) {
 }
 
 function onPlayerStateChange(event) {
-  const playerButton = $(".player__start");
+  const playerButton = $(".start");
   switch (event.data) {
     case 1:
       $(".player__wrapper").addClass("active");
@@ -52,7 +52,7 @@ function onPlayerStateChange(event) {
   }
 }
 
-$(".player__start").on("click", e => {
+$(".start").on("click", e => {
   const playerStatus = player.getPlayerState(); // 0 - ended, 1 - played, 2 - paused
 
   if (playerStatus !== 1) {
