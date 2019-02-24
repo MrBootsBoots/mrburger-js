@@ -27,13 +27,15 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('../images/player_bg.png') center center / cover no-repeat,
-              url('../images/play_white.png') center center / 50px no-repeat;
+  background: url('../images/player_bg.png') center center / cover no-repeat;
   cursor: pointer;
 }
 
 .player__wrapper {
   &.active .player__splash {
+    display: none;
+  }
+  &.active .player__start-btn {
     display: none;
   }
 }
@@ -83,6 +85,16 @@
   }
 }
 
+.player__start-btn {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  width: 4rem;
+}
+
 .player__playback {
   position: absolute;
   height: 4px;
@@ -103,6 +115,20 @@
   position: absolute;
   top: -4px;
   transform: translateX(-50%);
+  left: 0;
+  cursor: pointer;
+}
+
+.player__sound-btn {
+  background: #626262;
+  border-radius: 50px;
+  border: none;
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  position: absolute;
+  top: 15px;
+  transform: translateY(-50%);
   left: 0;
   cursor: pointer;
 }
@@ -152,7 +178,7 @@
   height: 4px;
   border-radius: 1px;
   background-color: #626262;
-  -webkit-appearance: none;/*Override default CSS styles*/
+  -webkit-appearance: none;
   appearance: none;
   outline: none;
   margin-left: 2rem;
@@ -166,7 +192,6 @@
 
 .duration__length::-webkit-slider-thumb {
   -webkit-appearance: none;
-  /* Override default look */
   appearance: none;
   background: #626262;
   cursor: pointer;
