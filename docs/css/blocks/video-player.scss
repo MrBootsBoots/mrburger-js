@@ -126,6 +126,7 @@
 }
 
 .player__sound-btn {
+  display: none;
   background: #626262;
   border-radius: 50px;
   border: none;
@@ -137,6 +138,10 @@
   transform: translateY(-50%);
   left: 0;
   cursor: pointer;
+
+  &.opened {
+    display: block;
+  }
 }
 
 .player__duration {
@@ -164,15 +169,14 @@
 }
 
 .sound__volume {
-  display: none;
-  position: absolute;
-  transform: rotate(90deg);
-  bottom: 30px;
-  right: 75px;
-  cursor: pointer;
-
   &.opened {
-    display: block;
+    position: absolute;
+    height: 10%;
+    width: 9%;
+    background: #626262;
+    right: 11.5%;
+    cursor: pointer;
+    transform: rotate(90deg);
   }
 
   @include phones {
@@ -190,12 +194,6 @@
   appearance: none;
   outline: none;
   margin-left: 2rem;
-}
-
-.duration__length--other{
-  width: 58px;
-  height: 4px;
-  margin-left: 0;
 }
 
 #yt-player {
