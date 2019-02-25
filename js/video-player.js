@@ -24,7 +24,7 @@ function onPlayerReady(event) {
   const duration = player.getDuration();
   let interval;
   updateTimerDisplay();
-  event.target.setVolume(50); // adjust the volume to 50%;
+  event.target.setVolume(100); // adjust the volume to 50%;
 
   $(".player").removeClass("hidden");
 
@@ -63,6 +63,10 @@ $(".start").on("click", e => {
   }
 });
 
+$(".player__splash").on("click", e => {
+  player.playVideo();
+});
+
 // duration bar
 $(".player__playback").on("click", e => {
   e.preventDefault();
@@ -85,12 +89,12 @@ function changeButtonPosition(percents) {
 $(".sound__volume").on("click", e => {
   e.preventDefault();
   const soundBar = $(e.currentTarget);
-  const newSoundButtonPosition = e.pageX - soundBar.offset().left;
-  const clickedPercents = (newSoundButtonPosition / soundBar.width()) * 100;
-  const newSoundValue = (player.getVolume() / 100) * clickedPercents;
-
-  changeSoundButtonPosition(clickedPercents);
-  player.seekTo(newSoundValue);
+  const newSoundButtonPosition = e.originalEvent.layerX;
+  const clickedVolumePercents = (newSoundButtonPosition / soundBar.width()) * 100;
+  const newSoundValue = (player.getVolume() / 100) * clickedVolumePercents;
+  console.log(newSoundValue);
+  changeSoundButtonPosition(clickedVolumePercents);
+  player.setVolume(newSoundValue);
 });
 
 function changeSoundButtonPosition(percents) {
@@ -99,9 +103,12 @@ function changeSoundButtonPosition(percents) {
   });
 }
 
-$(".player__splash").on("click", e => {
-  player.playVideo();
+// open-close volume line and button
+$(".player__sound").on("click", e => {
+  $(".sound__volume").toggleClass("opened");
+  $(".player__sound-btn").toggleClass("opened");
 });
+
 
 function updateTimerDisplay() {
   $(".player__duration-completed").text(formatTime(player.getCurrentTime()));
@@ -117,8 +124,3 @@ function formatTime(time) {
 
   return minutes + ":" + formatedSeconds;
 }
-
-// open-close volume line
-$(".player__sound").on("click", e => {
-  $(".sound__volume").toggleClass("opened");
-});
