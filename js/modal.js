@@ -2,6 +2,7 @@ const buttons = document.querySelectorAll('.reviews__btn');
 const orderButton = document.querySelector('#send');
 const reviews = document.querySelectorAll('.reviews__item-hover');
 const template = document.querySelector('#modal-template').innerHTML;
+const textContent = document.querySelector('.reviews__text');
 const modal = createModal();
 
 for (var button of buttons) {
@@ -13,10 +14,15 @@ for (var button of buttons) {
 
 for (var review of reviews) {
   review.addEventListener('click', e => {
-    let content = review.cloneNode(true),
-    btn = content.querySelector('.reviews__btn');
+    let content = review.cloneNode(true);
+    let btn = content.querySelector('.reviews__btn');
     content.removeChild(btn);
-    modal.setContent(content.innerHTML);
+
+    if (content.contains(textContent)) {
+      modal.setContent(content.innerHTML);
+    } else {
+      modal.setContent(content.innerHTML + textContent.innerHTML);
+    }
   })
 };
 
