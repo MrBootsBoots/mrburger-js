@@ -82,26 +82,26 @@ function changeButtonPosition(percents) {
 }
 
 // sound bar
-$(".duration__length").on("click", e => {
+$(".sound__volume").on("click", e => {
   e.preventDefault();
   const soundBar = $(e.currentTarget);
-  const newSoundButtonPosition = e.pageY - soundBar.offset().top;
-  const clickedPercents = (newSoundButtonPosition / soundBar.height()) * 100;
+  const newSoundButtonPosition = e.pageX - soundBar.offset().left;
+  const clickedPercents = (newSoundButtonPosition / soundBar.width()) * 100;
   const newSoundValue = (player.getVolume() / 100) * clickedPercents;
 
   changeSoundButtonPosition(clickedPercents);
   player.seekTo(newSoundValue);
 });
 
+function changeSoundButtonPosition(percents) {
+  $(".player__sound-btn").css({
+    left: `${percents}%`
+  });
+}
+
 $(".player__splash").on("click", e => {
   player.playVideo();
 });
-
-function changeSoundButtonPosition(percents) {
-  $(".player__sound-btn").css({
-    top: `${percents}%`
-  });
-}
 
 function updateTimerDisplay() {
   $(".player__duration-completed").text(formatTime(player.getCurrentTime()));
