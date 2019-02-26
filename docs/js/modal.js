@@ -2,7 +2,6 @@ const buttons = document.querySelectorAll('.reviews__btn');
 const orderButton = document.querySelector('#send');
 const reviews = document.querySelectorAll('.reviews__item-hover');
 const template = document.querySelector('#modal-template').innerHTML;
-const textContent = document.querySelector('.reviews__text');
 const modal = createModal();
 
 for (var button of buttons) {
@@ -16,13 +15,10 @@ for (var review of reviews) {
   review.addEventListener('click', e => {
     let content = review.cloneNode(true);
     let btn = content.querySelector('.reviews__btn');
+    let reviewText = content.querySelector('.reviews__text');
+    reviewText.classList.add('displayed');
     content.removeChild(btn);
-
-    if (content.contains(textContent)) {
-      modal.setContent(content.innerHTML);
-    } else {
-      modal.setContent(content.innerHTML + textContent.innerHTML);
-    }
+    modal.setContent(content.innerHTML);
   })
 };
 
@@ -31,7 +27,7 @@ function createModal(content) {
   container.className = 'popup';
   container.innerHTML = template;
 
-  const contentBlock = container.querySelector('.popup__content')
+  const contentBlock = container.querySelector('.popup__content');
 
   const closeBtn = container.querySelector('.popup__close');
   closeBtn.addEventListener('click', e => {

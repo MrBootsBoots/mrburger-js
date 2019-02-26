@@ -87,4 +87,8 @@
   @include phones() {
     display: none;
   }
+
+  &.displayed {
+    display: block;
+  }
 }

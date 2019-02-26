@@ -24,7 +24,7 @@ function onPlayerReady(event) {
   const duration = player.getDuration();
   let interval;
   updateTimerDisplay();
-  event.target.setVolume(100); // adjust the volume to 50%;
+  event.target.setVolume(100); // adjust the volume to 100%;
 
   $(".player").removeClass("hidden");
 
@@ -71,7 +71,7 @@ $(".player__splash").on("click", e => {
 $(".player__playback").on("click", e => {
   e.preventDefault();
   const bar = $(e.currentTarget);
-  const newButtonPosition = e.pageX - bar.offset().left;
+  const newButtonPosition = e.originalEvent.layerX;
   const clickedPercents = (newButtonPosition / bar.width()) * 100;
   const newPlayerTime = (player.getDuration() / 100) * clickedPercents;
 
@@ -91,8 +91,7 @@ $(".sound__volume").on("click", e => {
   const soundBar = $(e.currentTarget);
   const newSoundButtonPosition = e.originalEvent.layerX;
   const clickedVolumePercents = (newSoundButtonPosition / soundBar.width()) * 100;
-  const newSoundValue = (player.getVolume() / 100) * clickedVolumePercents;
-  console.log(newSoundValue);
+  const newSoundValue = clickedVolumePercents;
   changeSoundButtonPosition(clickedVolumePercents);
   player.setVolume(newSoundValue);
 });
