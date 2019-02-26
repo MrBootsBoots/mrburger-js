@@ -83,7 +83,7 @@
           </div>
 
           <div class="arrow arrow_down">
-            <a href="#" id='arrow-down' class="arrow__link">
+            <a href data-scroll-to="1" id='arrow-down' class="arrow__link">
               <svg class="arrow__icon">
                 <use xlink:href="./sprite.svg#arrow-icon"></use>
               </svg>
@@ -93,7 +93,7 @@
         </div>
       </section>
 
-      <section class="section section_centered best" id="about">
+      <section class="section section_centered best">
         <div class="container best__container">
           <h1 class="section-title section-title_black section-title_best">Мы лучшие</h1>
           <ul class="best__list">
@@ -150,7 +150,7 @@
         </div>
       </section>
 
-      <section class="section product" id="burgers">
+      <section class="section product">
         <div class="container product__container">
           <div class="product__content">
 
@@ -251,7 +251,7 @@
                     <div class="slider__price">
                       <h2 class="slider__price-digits">500</h2>
                       <h3 class="slider__price-currency">рублей</h3>
-                      <a href="#order" class="btn product__btn">Заказать</a>
+                      <a href data-scroll-to="7" class="btn product__btn">Заказать</a>
                     </div>
                   </div>
                 </li>
@@ -342,7 +342,7 @@
                     <div class="slider__price">
                       <h2 class="slider__price-digits">720</h2>
                       <h3 class="slider__price-currency">рублей</h3>
-                      <a href="#order" class="btn product__btn">Заказать</a>
+                      <a href data-scroll-to="7" class="btn product__btn">Заказать</a>
                     </div>
                   </div>
                 </li>
@@ -434,7 +434,7 @@
                     <div class="slider__price">
                       <h2 class="slider__price-digits">390</h2>
                       <h3 class="slider__price-currency">рублей</h3>
-                      <a href="#order" class="btn product__btn">Заказать</a>
+                      <a href data-scroll-to="7" class="btn product__btn">Заказать</a>
                     </div>
                   </div>
                 </li>
@@ -525,7 +525,7 @@
                     <div class="slider__price">
                       <h2 class="slider__price-digits">450</h2>
                       <h3 class="slider__price-currency">рублей</h3>
-                      <a href="#order" class="btn product__btn">Заказать</a>
+                      <a href data-scroll-to="7" class="btn product__btn">Заказать</a>
                     </div>
                   </div>
                 </li>
@@ -616,7 +616,7 @@
                     <div class="slider__price">
                       <h2 class="slider__price-digits">255</h2>
                       <h3 class="slider__price-currency">рублей</h3>
-                      <a href="#order" class="btn product__btn">Заказать</a>
+                      <a href data-scroll-to="7" class="btn product__btn">Заказать</a>
                     </div>
                   </div>
                 </li>
@@ -633,7 +633,7 @@
         </div>
       </section>
 
-      <section class="section team" id="team">
+      <section class="section team">
         <div class="container team__container">
           <div class="team__content">
             <h1 class="section-title section-title_team">Команда</h1>
@@ -701,7 +701,7 @@
         </div>
       </section>
 
-      <section class="section menu" id="menu">
+      <section class="section menu">
         <h1 class="section-title section-title_white section-title_menu">Меню</h1>
         <div class="menu-accordeon">
           <ul class="menu-accordeon__list">
@@ -769,7 +769,7 @@
         </div>
       </section>
 
-      <section class="section reviews" id="feedback">
+      <section class="section reviews">
         <ul class="reviews__list">
           <li class="reviews__item" style="background-image: url('images/rev-1.png')">
             <div class="reviews__item-hover">
@@ -896,12 +896,12 @@
 
       <section class="section video">
         <div class="container video__container">
-          <h2 class="section-title section-title_black">Как мы работаем</h2>
+          <h2 class="section-title section-title_black section-title_centered">Как мы работаем</h2>
           <div class="player hidden">
             <div class="player__wrapper">
               <div id="yt-player"></div>
               <div class="player__splash"></div>
-              <img src="images/play_white.png" alt="" class="start player__start-btn">
+              <a href="#" class="start player__start-btn"></a>
             </div>
             <div class="player__controls">
               <button class="start player__start"></button>
@@ -925,7 +925,7 @@
         </div>
       </section>
 
-      <section class="section section_centered order" id="order">
+      <section class="section section_centered order">
         <div class="container order__container">
 
           <h1 class="section-title section-title_order">Закажите доставку</h1>
@@ -1106,25 +1106,25 @@
       <nav class="nav" id="nav">
         <ul class="nav__list nav__list_hamburger-menu">
           <li class="nav__item" id="nav__item">
-            <a href="#about" class="nav__link" id="nav__link">О нас</a>
+            <a href data-scroll-to="1" class="nav__link" id="nav__link">О нас</a>
           </li>
           <li class="nav__item" id="nav__item">
-            <a href="#burgers" class="nav__link" id="nav__link">Бургеры</a>
+            <a href data-scroll-to="2" class="nav__link" id="nav__link">Бургеры</a>
           </li>
           <li class="nav__item" id="nav__item">
-            <a href="#team" class="nav__link" id="nav__link">Команда</a>
+            <a href data-scroll-to="3" class="nav__link" id="nav__link">Команда</a>
           </li>
           <li class="nav__item" id="nav__item">
-            <a href="#menu" class="nav__link" id="nav__link">Меню</a>
+            <a href data-scroll-to="4" class="nav__link" id="nav__link">Меню</a>
           </li>
           <li class="nav__item" id="nav__item">
-            <a href="#feedback" class="nav__link" id="nav__link">Отзывы</a>
+            <a href data-scroll-to="5" class="nav__link" id="nav__link">Отзывы</a>
           </li>
           <li class="nav__item" id="nav__item">
-            <a href="#how" class="nav__link" id="nav__link">Как мы работаем</a>
+            <a href data-scroll-to="6" class="nav__link" id="nav__link">Как мы работаем</a>
           </li>
           <li class="nav__item" id="nav__item">
-            <a href="#map" class="nav__link" id="nav__link">Контакты</a>
+            <a href data-scroll-to="8" class="nav__link" id="nav__link">Контакты</a>
           </li>
         </ul>
       </nav>
