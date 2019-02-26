@@ -90,11 +90,8 @@ $(".sound__volume").on("click", e => {
   e.preventDefault();
   const soundBar = $(e.currentTarget);
   const newSoundButtonPosition = e.originalEvent.layerX;
-  console.log(newSoundButtonPosition);
   const clickedVolumePercents = (newSoundButtonPosition / soundBar.width()) * 100;
-  console.log(clickedVolumePercents);
   const newSoundValue = clickedVolumePercents;
-  console.log(newSoundValue);
   changeSoundButtonPosition(clickedVolumePercents);
   player.setVolume(newSoundValue);
 });
