@@ -13,7 +13,7 @@
 .player {
   position: relative;
   display: inline-block;
-  width: 70.3%;
+  width: 70.5%;
   min-height: 49.4%;
 
   &.hidden {
@@ -96,9 +96,19 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-10%, -50%);
   cursor: pointer;
-  width: 4rem;
+  width: 6rem;
+  height: 6rem;
+  background: url('../images/play_white.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @include tablets() {
+    background: url('../images/play_black.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 }
 
 .player__playback {
@@ -106,8 +116,8 @@
   height: 11.44%;
   width: 67.495%;
   background: #626262;
-  top: 15px;
-  left: 50px;
+  top: rem(15px);
+  left: rem(50px);
   cursor: pointer;
 }
 
@@ -150,15 +160,25 @@
   right: 20px;
   color: #626262;
   font-weight: bold;
+
+  @include howWeWork() {
+    display: none;
+  }
 }
 
 .player__sound {
   width: 5%;
-  display: flex;
   align-items: center;
   position: absolute;
   top: 2px;
   right: 107px;
+
+  @include tablets() {
+    display: none;
+  }
+  @include phones() {
+    display: none;
+  }
 }
 
 .sound__mic {

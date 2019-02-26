@@ -19,6 +19,9 @@
   &_white {
     color: #ffffff;
   }
+  &_centered {
+    text-align: center;
+  }
   &_best {
     @include tablets() {
       font-size: rem(82px);
