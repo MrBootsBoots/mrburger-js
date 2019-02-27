@@ -1,5 +1,6 @@
 const teamItems = document.querySelectorAll('.team-accordeon__item');
 const menuItems = document.querySelectorAll('.menu-accordeon__item');
+const menuText = document.querySelectorAll('.menu-accordeon__description-txt');
 
 for (item of teamItems) {
   item.addEventListener('click', handleTeamAcco);
@@ -18,7 +19,12 @@ function handleTeamAcco(e) {
     closeTeamItem(teamItems);
     openTeamItem(curTeamItem);
   }
+
+  if(e.currentTarget == menuText) {
+    closeMenuItem() = false;
+  }
 }
+
 function handleMenuAcco(e) {
   const curMenuItem = e.currentTarget;
   const closedMenuItem = curMenuItem.classList.contains('active');
