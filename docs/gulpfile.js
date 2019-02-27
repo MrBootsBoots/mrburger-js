@@ -31,21 +31,15 @@ task('clean', () => {
 });
 
 task('copy:html', () => {
-  return src('src/*.html').pipe(dest('dist')).pipe(reload({ stream: true }));
+  return src(`${SRC_PATH}/*.html`)
+    .pipe(dest(DIST_PATH))
+    .pipe(reload( {stream: true} ));
 });
-task('copy:sprite', () => {
-  return src('src/*.svg').pipe(dest('dist')).pipe(reload({ stream: true }));
-});
-task('copy:images', () => {
-  return src('src/images/*').pipe(dest('dist/images')).pipe(reload({ stream: true }));
-});
-task('copy:fonts', () => {
-  return src('src/fonts/*').pipe(dest('dist/fonts')).pipe(reload({ stream: true }));
-});
+
 
 const styles = [
   'node_modules/normalize.css/normalize.css',
-  'src/css/main.scss'
+  'css/main.scss'
 ]
 
 task('styles', () => {
@@ -79,8 +73,8 @@ task('scripts', () => {
     .pipe(concat('main.min.js', {newLine: ';'}))
     .pipe(babel({
             presets: ['@babel/env']
-        }))
-    .pipe(uglify())
+        })) // not working
+    .pipe(uglify()) // not working, too!
     .pipe(gulpif(env === 'dev', sourcemaps.write()))
     .pipe(dest(DIST_PATH))
     .pipe(reload({ stream: true }))
@@ -118,7 +112,7 @@ task('server', () => {
 });
 
 task('watch', () => {
-  watch('./src/css/**/*.scss', series('styles'));
+  watch('./src/styles/**/*.scss', series('styles'));
   watch('./src/*.html', series('copy:html'));
   watch('./src/scripts/*.js', series('scripts'));
   watch('./src/images/icons/*.svg', series('icons'));
@@ -128,7 +122,7 @@ task(
   'default',
   series(
     'clean',
-    parallel('copy:html', 'copy:sprite', 'copy:images', 'copy:fonts', 'styles', 'scripts', 'icons'),
+    parallel('copy:html', 'styles', 'scripts', 'icons'),
     parallel('watch', 'server')
   )
 );
@@ -137,6 +131,6 @@ task(
   'build',
   series(
     'clean',
-    parallel('copy:html', 'copy:sprite', 'copy:images', 'copy:fonts', 'styles', 'scripts', 'icons'),
+    parallel('copy:html', 'styles', 'scripts', 'icons'),
   )
 );
