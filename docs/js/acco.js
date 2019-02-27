@@ -19,10 +19,6 @@ function handleTeamAcco(e) {
     closeTeamItem(teamItems);
     openTeamItem(curTeamItem);
   }
-
-  if(e.currentTarget == menuText) {
-    closeMenuItem() = false;
-  }
 }
 
 function handleMenuAcco(e) {
@@ -34,6 +30,10 @@ function handleMenuAcco(e) {
   } else {
     closeMenuItem(menuItems);
     openMenuItem(curMenuItem);
+  }
+
+  if(e.currentTarget == menuText) {
+    closeMenuItem() = false;
   }
 }
 
