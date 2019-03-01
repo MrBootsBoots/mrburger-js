@@ -15,7 +15,7 @@ function handleTeamAcco(e) {
 
   if (openedTeamItem && e.target != teamContent) {
     closeTeamItem(teamItems);
-  
+
   } else {
     closeTeamItem(teamItems);
     openTeamItem(curTeamItem);
@@ -24,16 +24,10 @@ function handleTeamAcco(e) {
 
 function handleMenuAcco(e) {
   const curMenuItem = e.currentTarget;
-  const closedMenuItem = curMenuItem.classList.contains('active');
-  const menuTarget = e.target;
-  const menuText = menuTarget.querySelector('.menu-accordeon__description-txt');
+  const openedMenuItem = curMenuItem.classList.contains('active');
+  const menuContent = curMenuItem.querySelector('.menu-accordeon__description-txt');
 
-
-  if (menuTarget != menuText) {
-    closeMenuItem(menuItems);
-  }
-
-  if (closedMenuItem) {
+  if (openedMenuItem && e.target != menuContent) {
     closeMenuItem(menuItems);
   } else {
     closeMenuItem(menuItems);
