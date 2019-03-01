@@ -1,6 +1,5 @@
 const teamItems = document.querySelectorAll('.team-accordeon__item');
 const menuItems = document.querySelectorAll('.menu-accordeon__item');
-const menuText = document.querySelectorAll('.menu-accordeon__description-txt');
 
 for (item of teamItems) {
   item.addEventListener('click', handleTeamAcco);
@@ -11,10 +10,12 @@ for (item of menuItems) {
 
 function handleTeamAcco(e) {
   const curTeamItem = e.currentTarget;
-  const closedTeamItem = curTeamItem.classList.contains('active');
+  const openedTeamItem = curTeamItem.classList.contains('active');
+  const teamContent = curTeamItem.querySelector('.team-accordeon__content');
 
-  if (closedTeamItem) {
+  if (openedTeamItem && e.target != teamContent) {
     closeTeamItem(teamItems);
+  
   } else {
     closeTeamItem(teamItems);
     openTeamItem(curTeamItem);
@@ -24,16 +25,19 @@ function handleTeamAcco(e) {
 function handleMenuAcco(e) {
   const curMenuItem = e.currentTarget;
   const closedMenuItem = curMenuItem.classList.contains('active');
+  const menuTarget = e.target;
+  const menuText = menuTarget.querySelector('.menu-accordeon__description-txt');
+
+
+  if (menuTarget != menuText) {
+    closeMenuItem(menuItems);
+  }
 
   if (closedMenuItem) {
     closeMenuItem(menuItems);
   } else {
     closeMenuItem(menuItems);
     openMenuItem(curMenuItem);
-  }
-
-  if(e.currentTarget == menuText) {
-    closeMenuItem() = false;
   }
 }
 
